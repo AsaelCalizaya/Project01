@@ -1,0 +1,12 @@
+<suite name="JagdPantherSuit">
+	<test name="Suit 1" >
+		<classes>
+			<class name="test.StartTest"/>
+			<class name="test.VerifyIfProgramWasCreated"/>
+			<class name="test.VerifyIfPeriodWasCreated"/>
+			<class name="test.VerifyIfApplicantWasCreated"/>
+			<class name="test.VerifyIfStageWasCreated"/>
+			<class name="test.VerifyIfUserWasCreated"/>
+		</classes>
+	</test>
+</suite>

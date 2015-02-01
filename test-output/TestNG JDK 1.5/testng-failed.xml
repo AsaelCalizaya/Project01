@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [TestNG JDK 1.5]">
+  <test name="Suit 1(failed)">
+    <classes>
+      <class name="test.StartTest">
+        <methods>
+          <include name="verifyLogin"/>
+        </methods>
+      </class> <!-- test.StartTest -->
+      <class name="test.CreateProgram">
+        <methods>
+          <include name="createProgram"/>
+          <include name="verifyLogin"/>
+        </methods>
+      </class> <!-- test.CreateProgram -->
+    </classes>
+  </test> <!-- Suit 1(failed) -->
+</suite> <!-- Failed suite [TestNG JDK 1.5] -->

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="JagdPantherSuit" duration-ms="62763" started-at="2015-02-01T23:13:42Z" finished-at="2015-02-01T23:14:45Z">
+    <groups>
+    </groups>
+    <test name="Suit 1" duration-ms="62763" started-at="2015-02-01T23:13:42Z" finished-at="2015-02-01T23:14:45Z">
+      <class name="test.VerifyIfStageWasCreated">
+        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@7857fe2]" name="createNewStage" duration-ms="3502" started-at="2015-02-01T19:14:24Z" data-provider="StagesDataXlsx" finished-at="2015-02-01T19:14:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stagename1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[stageTitle1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[stageDescription1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewStage -->
+        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@7857fe2]" name="createNewStage" duration-ms="4554" started-at="2015-02-01T19:14:27Z" data-provider="StagesDataXlsx" finished-at="2015-02-01T19:14:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stagename2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[stageTitle2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[stageDescription2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewStage -->
+      </class> <!-- test.VerifyIfStageWasCreated -->
+      <class name="test.StartTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.StartTest@3932c79a]" name="init" is-config="true" duration-ms="1363" started-at="2015-02-01T19:13:40Z" finished-at="2015-02-01T19:13:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:test.StartTest@3932c79a]" name="quit" is-config="true" duration-ms="361" started-at="2015-02-01T19:14:45Z" finished-at="2015-02-01T19:14:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- test.StartTest -->
+      <class name="test.VerifyIfPeriodWasCreated">
+        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@20b2475a]" name="createPeriod" duration-ms="7627" started-at="2015-02-01T19:13:53Z" data-provider="PeriodDataXlsx" finished-at="2015-02-01T19:14:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NamePeriod1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1/2/2015]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPeriod -->
+        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@20b2475a]" name="createPeriod" duration-ms="6747" started-at="2015-02-01T19:14:00Z" data-provider="PeriodDataXlsx" finished-at="2015-02-01T19:14:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NamePeriod2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1/3/2015]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPeriod -->
+      </class> <!-- test.VerifyIfPeriodWasCreated -->
+      <class name="test.VerifyIfProgramWasCreated">
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@6f15d60e]" name="createProgram" duration-ms="4816" started-at="2015-02-01T19:13:44Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-01T19:13:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NameProgram1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TitleProgram1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DescriptionProgram1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProgram -->
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@6f15d60e]" name="createProgram" duration-ms="4315" started-at="2015-02-01T19:13:48Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-01T19:13:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NameProgram2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TitleProgram2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DescriptionProgram2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProgram -->
+      </class> <!-- test.VerifyIfProgramWasCreated -->
+      <class name="test.VerifyIfApplicantWasCreated">
+        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@210ab13f]" name="createApplicant" duration-ms="9403" started-at="2015-02-01T19:14:07Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-01T19:14:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[NameApplicant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LastNameApplicant]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Name1@LastName.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[777777771]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createApplicant -->
+        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@210ab13f]" name="createApplicant" duration-ms="7121" started-at="2015-02-01T19:14:17Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-01T19:14:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[10002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[NameApplicante]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[LastNameApplicant]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Name1@LastName2.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[777777772]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createApplicant -->
+      </class> <!-- test.VerifyIfApplicantWasCreated -->
+      <class name="test.VerifyIfUserWasCreated">
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@1be2019a]" name="createNewUser" duration-ms="7489" started-at="2015-02-01T19:14:32Z" data-provider="UsersDataXlsx" finished-at="2015-02-01T19:14:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[userName1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[userLastName1]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[user@lastName1.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewUser -->
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@1be2019a]" name="createNewUser" duration-ms="5078" started-at="2015-02-01T19:14:39Z" data-provider="UsersDataXlsx" finished-at="2015-02-01T19:14:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1235]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[userName2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[userLastName2]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[user@lastName2.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewUser -->
+      </class> <!-- test.VerifyIfUserWasCreated -->
+    </test> <!-- Suit 1 -->
+  </suite> <!-- JagdPantherSuit -->
+</testng-results>
