@@ -8,13 +8,17 @@ import framework.pages.programs.ProgramDetailPage;
 import framework.utils.DataProviderClass;
 
 /**
- * Title: 
+ * Title: Verify that a new period can be created in a program
  * @author Asael Calizaya
  *
  */
 public class VerifyIfPeriodWasCreated {
 
-	
+	/**
+	 * Description:This test case is to verify that a period can be created to a program
+	 * @param name
+	 * @param startDate
+	 */
 	@Test(dataProvider = "PeriodDataXlsx",dataProviderClass = DataProviderClass.class)
 	public void createPeriod(String name, String startDate) {
 		ProgramDetailPage programDetail = new ProgramDetailPage();
@@ -25,7 +29,6 @@ public class VerifyIfPeriodWasCreated {
 				.clickAddNewPeriodButton()
 				.setPeriodName(name)
 				.setStartPeriodDate(startDate);
-    	System.out.println(detailPage.getPeriodName() + "---" + name);
 		Assert.assertTrue(detailPage.getPeriodName().contains(name));
 	}
 }

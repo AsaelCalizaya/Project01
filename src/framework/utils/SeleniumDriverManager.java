@@ -1,7 +1,3 @@
-/*
- *
- */
-
 package framework.utils;
 
 import org.openqa.selenium.WebDriver;
@@ -11,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Manages the web browser
+ * @author Asael Calizaya
  */
 public class SeleniumDriverManager {
 	private static SeleniumDriverManager manager = null;

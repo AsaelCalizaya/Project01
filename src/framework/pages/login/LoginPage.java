@@ -9,6 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import framework.pages.users.UsersPage;
 import framework.utils.SeleniumDriverManager;
 
+/**
+ * 
+ * @author Asael Calizaya
+ *
+ */
 public class LoginPage {
 
 	protected WebDriver driver;

@@ -5,6 +5,11 @@ import org.openqa.selenium.support.FindBy;
 
 import framework.pages.navigation.Navigation;
 
+/**
+ * 
+ * @author Asael Calizaya
+ *
+ */
 public class StagePage extends Navigation{
 	
 	@FindBy(id="j_id_t:j_id_10")

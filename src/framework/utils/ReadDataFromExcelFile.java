@@ -10,9 +10,22 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+/**
+ * 
+ * @author Asael Calizaya
+ *
+ */
 public class ReadDataFromExcelFile {
 	
-
+	/**
+	 * This method receive the file path where are the XLSX file, file name and sheetName
+	 * to read the information to return like an object
+	 * @param filePath
+	 * @param fileName
+	 * @param sheetName
+	 * @return
+	 * @throws IOException
+	 */
 	@SuppressWarnings("resource")
 	public Object[][] readExcel(String filePath,String fileName,String sheetName) throws IOException{
 		File file = new File(filePath+"\\"+fileName);
@@ -28,11 +41,9 @@ public class ReadDataFromExcelFile {
 		Sheet sheet = dataProviderResource.getSheet(sheetName);
 		int rowCount = sheet.getLastRowNum()-sheet.getFirstRowNum();
 		Object[][] dataArray = new Object[rowCount+1][sheet.getRow(0).getLastCellNum()];
-		//System.out.println(rowCount + " " + sheet.getRow(0).getLastCellNum());
 		for (int i = 0; i < rowCount+1; i++) {
 			Row row = sheet.getRow(i);
 			for (int j = 0; j < row.getLastCellNum(); j++) {
-				//System.out.println(rowCount+"---"+row.getLastCellNum()+"---"+row.getCell(j).getStringCellValue());
 				dataArray[i][j]=row.getCell(j).getStringCellValue().toString();
 			}
 		}

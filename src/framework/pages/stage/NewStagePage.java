@@ -5,6 +5,11 @@ import org.openqa.selenium.support.FindBy;
 
 import framework.pages.navigation.Navigation;
 
+/**
+ * 
+ * @author Asael Calizaya
+ *
+ */
 public class NewStagePage extends Navigation {
 
 	@FindBy(id = "form:inputName")

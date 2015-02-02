@@ -1,7 +1,11 @@
 package framework.bd;
 
 import java.sql.*;
-
+/**
+ * 
+ * @author Asael Calizaya
+ *
+ */
 public class ConnectionBD {
 
       private static Connection con = null;
@@ -10,6 +14,9 @@ public class ConnectionBD {
       private static String userDB = "panther";
       private static String passDB = "panther11";
       
+      /**
+       * This constructor initialize the connection with data base
+       */
       public ConnectionBD(){
     	  try{
     		  String dbClass = "com.mysql.jdbc.Driver";
@@ -22,6 +29,10 @@ public class ConnectionBD {
     	  }
       }
       
+      /**
+       * This method is to delete all periods from data base
+       * @throws SQLException
+       */
       public void DeletePeriod() throws SQLException{
       	  try{
       		  String query = "DELETE FROM jp_period WHERE ID > 0";
@@ -36,7 +47,11 @@ public class ConnectionBD {
     		  }
     	  }
       }
-      
+      /**
+       * This method is to delete all applicants and users from data base 
+       * except the admin user
+       * @throws SQLException
+       */
       public void DeletePerson() throws SQLException{
       	  try{
       		  String query0 = "DELETE FROM login_register WHERE ID > 0";
@@ -58,9 +73,12 @@ public class ConnectionBD {
     	  }
       }
       
+      /**
+       * This method is to delete all programs from data base 
+       * @throws SQLException
+       */
       public void DeleteProgram() throws SQLException{
       	  try{
-      		  //DELETE FROM program WHERE ID = 2;
       		  String query1 = "DELETE FROM jp_period WHERE PROGRAM_ID > 0";
       		  statement.execute(query1);    
       		  String query2 = "DELETE FROM program WHERE ID > 0";
@@ -76,6 +94,10 @@ public class ConnectionBD {
     	  }
       }
       
+      /**
+       * This method is to delete all Stages from data base 
+       * @throws SQLException
+       */
       public void DeleteStage() throws SQLException{
       	  try{
       		  String query1 = "DELETE FROM stage WHERE ID > 0";

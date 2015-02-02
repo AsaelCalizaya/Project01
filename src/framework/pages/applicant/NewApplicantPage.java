@@ -6,6 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import framework.pages.navigation.Navigation;
 import framework.pages.period.PeriodDetailsPage;
 
+/**
+ * 
+ * @author Asael Calizaya
+ *
+ */
 public class NewApplicantPage extends Navigation{
 	
 	@FindBy(id = "j_id_t:ci") 
