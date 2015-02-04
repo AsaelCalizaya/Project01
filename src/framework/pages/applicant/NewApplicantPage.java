@@ -1,21 +1,18 @@
 package framework.pages.applicant;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import framework.pages.navigation.INavigation;
 import framework.pages.period.PeriodDetailsPage;
-import framework.utils.SeleniumDriverManager;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class NewApplicantPage {
-	WebDriver driver;
-	
+public class NewApplicantPage implements INavigation {	
 	@FindBy(id = "j_id_t:ci") 
 	WebElement textBoxCI;
 	
@@ -35,7 +32,6 @@ public class NewApplicantPage {
 	WebElement buttonSave;
 	
 	public NewApplicantPage() {
-		driver = SeleniumDriverManager.getManager().getDriver();
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -69,6 +65,15 @@ public class NewApplicantPage {
 		return new PeriodDetailsPage();
 	}
 	
+	/**
+	 * 
+	 * @param ci
+	 * @param name
+	 * @param lastName
+	 * @param eMail
+	 * @param cellphone
+	 * @return
+	 */
 	public PeriodDetailsPage createApplicant(String ci, String name, String lastName, String eMail,
 											 String cellphone) {
 		setCI(ci);

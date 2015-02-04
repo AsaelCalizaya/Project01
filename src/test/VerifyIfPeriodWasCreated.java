@@ -3,7 +3,7 @@ package test;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-import framework.pages.navigation.Navigation;
+import framework.pages.HomePage;
 import framework.pages.period.PeriodDetailsPage;
 import framework.utils.DataProviderClass;
 
@@ -21,8 +21,8 @@ public class VerifyIfPeriodWasCreated {
 	 */
 	@Test(dataProvider = "PeriodDataXlsx",dataProviderClass = DataProviderClass.class)
 	public void createPeriod(String name, String startDate) {
-		Navigation navigation = new Navigation();
-		PeriodDetailsPage detailPage = navigation
+		HomePage home = new HomePage();
+		PeriodDetailsPage detailPage = home
 				.clickProgramLink()
 				.clickDetailProgram()
 				.clickPeriodButton()

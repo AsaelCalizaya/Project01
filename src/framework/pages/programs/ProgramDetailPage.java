@@ -1,21 +1,18 @@
 package framework.pages.programs;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import framework.pages.navigation.INavigation;
 import framework.pages.period.PeriodDetailsPage;
-import framework.utils.SeleniumDriverManager;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class ProgramDetailPage {
-	WebDriver driver;
-	
+public class ProgramDetailPage implements INavigation{
 	@FindBy(id = "j_id_t:nameInput_display") 
 	WebElement programName;
 	
@@ -26,20 +23,31 @@ public class ProgramDetailPage {
 	WebElement buttonAddPeriod;
 	
 	public ProgramDetailPage() {
-		driver = SeleniumDriverManager.getManager().getDriver();
 		PageFactory.initElements(driver, this);
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public ProgramDetailPage clickPeriodButton() {
 		buttonPeriod.click();
 		return this;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public PeriodDetailsPage clickAddNewPeriodButton() {
 		buttonAddPeriod.click();
 		return new PeriodDetailsPage();
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public String getNameProgram() {
 		return programName.getText();
 	}

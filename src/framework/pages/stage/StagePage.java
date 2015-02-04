@@ -1,20 +1,17 @@
 package framework.pages.stage;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import framework.utils.SeleniumDriverManager;
+import framework.pages.navigation.INavigation;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class StagePage {
-	WebDriver driver;
-	
+public class StagePage implements INavigation{
 	@FindBy(id="j_id_t:j_id_10")
 	WebElement newStageButton;
 	
@@ -22,17 +19,23 @@ public class StagePage {
 	WebElement tableStage;
 
 	public StagePage() {
-		driver = SeleniumDriverManager.getManager().getDriver();
 		PageFactory.initElements(driver, this);
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public NewStagePage clickAddNewStageButton() {
 		newStageButton.click();
 		return new NewStagePage();
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getAllStages() {
 		return tableStage.getText();
-	}
-	
+	}	
 }

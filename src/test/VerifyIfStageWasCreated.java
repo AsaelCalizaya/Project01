@@ -3,7 +3,7 @@ package test;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-import framework.pages.navigation.Navigation;
+import framework.pages.HomePage;
 import framework.pages.stage.StagePage;
 import framework.utils.DataProviderClass;
 
@@ -24,8 +24,8 @@ public class VerifyIfStageWasCreated {
 	 */
     @Test(dataProvider = "StagesDataXlsx", dataProviderClass = DataProviderClass.class)
     public void createNewStage(String name, String title, String description) throws InterruptedException {
-	    Navigation navigation = new Navigation();  
-	    StagePage period = navigation
+    	HomePage home = new HomePage();  
+	    StagePage period = home
 	    	.clickStageLink()
 	    	.clickAddNewStageButton()
 	    	.createNewStage(name, title, description);

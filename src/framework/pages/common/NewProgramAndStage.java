@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  * @author Asael Calizaya
  *
  */
-public class NewProgramAndStage {
+public abstract class NewProgramAndStage {
 	@FindBy(id = "form:inputName") 
 	WebElement textBoxName;
 	

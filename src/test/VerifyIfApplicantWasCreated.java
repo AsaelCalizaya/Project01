@@ -3,7 +3,7 @@ package test;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-import framework.pages.navigation.Navigation;
+import framework.pages.HomePage;
 import framework.pages.period.PeriodDetailsPage;
 import framework.utils.DataProviderClass;
 
@@ -25,8 +25,8 @@ public class VerifyIfApplicantWasCreated {
 	 */
 	@Test(dataProvider = "ApplicantDataXlsx",dataProviderClass = DataProviderClass.class)
 	public void createApplicant(String ci,String name,String lastName,String eMail,String cellphone) {
-		Navigation navigation = new Navigation();
-		PeriodDetailsPage periodDetail = navigation
+		HomePage home = new HomePage();
+		PeriodDetailsPage periodDetail = home
 				.clickPeriodLink()
 				.clickEditButton()
 				.clickApplicantButton()
