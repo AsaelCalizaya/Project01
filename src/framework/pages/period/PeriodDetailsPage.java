@@ -1,17 +1,20 @@
 package framework.pages.period;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import framework.pages.applicant.NewApplicantPage;
-import framework.pages.navigation.Navigation;
+import framework.utils.SeleniumDriverManager;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class PeriodDetailsPage extends Navigation {
+public class PeriodDetailsPage {
+	WebDriver driver;
 	
 	@FindBy(id = "j_id_t:nameInput_display") 
 	WebElement labelName;
@@ -40,35 +43,40 @@ public class PeriodDetailsPage extends Navigation {
 	@FindBy(id = "j_id_t:applcantStageTabs:applicantList_data") 
 	WebElement applicantTable;
 	
-	public PeriodDetailsPage setPeriodName(String name){
+	public PeriodDetailsPage() {
+		driver = SeleniumDriverManager.getManager().getDriver();
+		PageFactory.initElements(driver, this);
+	}
+	
+	public PeriodDetailsPage setPeriodName(String name) {
 		labelName.click();
 		textBoxName.sendKeys(name);
 		buttonSaveName.click();
 		return this;
 	}
 
-	public PeriodDetailsPage setStartPeriodDate(String date){
+	public PeriodDetailsPage setStartPeriodDate(String date) {
 		labelDate.click();
 		textBoxDate.sendKeys(date);
 		buttonSaveDate.click();
 		return this;
 	}
 	
-	public PeriodDetailsPage clickApplicantButton(){
+	public PeriodDetailsPage clickApplicantButton() { 
 		applicantButton.click();
 		return this;
 	}
 	
-	public NewApplicantPage clickNewApplicantButton(){
+	public NewApplicantPage clickNewApplicantButton() {
 		newApplicantButton.click();
 		return new NewApplicantPage();
 	}
 	
-	public String getPeriodName(){
+	public String getPeriodName() {
 		return labelName.getText();
 	}
 	
-	public String getAllAplicants(){
+	public String getAllAplicants() {
 		return applicantTable.getText();
 	}
 }

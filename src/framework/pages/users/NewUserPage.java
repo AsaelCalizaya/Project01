@@ -1,17 +1,20 @@
 package framework.pages.users;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-import framework.pages.navigation.Navigation;
+import framework.utils.SeleniumDriverManager;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class NewUserPage  extends Navigation{
-
+public class NewUserPage {
+	WebDriver driver;
+	
 	@FindBy(id="j_id_t:inputCi")
 	WebElement textBoxCI;
 	
@@ -27,32 +30,37 @@ public class NewUserPage  extends Navigation{
 	@FindBy(id="j_id_t:j_id_1d")
 	WebElement buttonSave;
 	
-	public UsersPage clickSaveButton(){
+	public NewUserPage() {
+		driver = SeleniumDriverManager.getManager().getDriver();
+		PageFactory.initElements(driver, this);
+	}
+	
+	public UsersPage clickSaveButton() {
 		buttonSave.click();
 		return new UsersPage();
 	}
 	
-	public NewUserPage setCI(String ci){		
+	public NewUserPage setCI(String ci) {		
 		textBoxCI.sendKeys(ci);
 		return this;
 	}
 	
-	public NewUserPage setName(String name){
+	public NewUserPage setName(String name) {
 		textBoxName.sendKeys(name);
 		return this;
 	}
 
-	public NewUserPage setLastName(String lastName){
+	public NewUserPage setLastName(String lastName) {
 		textBoxLastName.sendKeys(lastName);
 		return this;
 	}
 	
-	public NewUserPage setEmail(String eMail){
+	public NewUserPage setEmail(String eMail) {
 		textBoxEmail.sendKeys(eMail);
 		return this;
 	}
 	
-	public UsersPage createNewUser(String ci, String Name, String Lastname,String email){
+	public UsersPage createNewUser(String ci, String Name, String Lastname,String email) {
 		setCI(ci);
 		setName(Name);
 		setLastName(Lastname);

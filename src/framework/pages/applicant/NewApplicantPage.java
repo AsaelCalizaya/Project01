@@ -1,17 +1,20 @@
 package framework.pages.applicant;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-import framework.pages.navigation.Navigation;
 import framework.pages.period.PeriodDetailsPage;
+import framework.utils.SeleniumDriverManager;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class NewApplicantPage extends Navigation{
+public class NewApplicantPage {
+	WebDriver driver;
 	
 	@FindBy(id = "j_id_t:ci") 
 	WebElement textBoxCI;
@@ -31,37 +34,43 @@ public class NewApplicantPage extends Navigation{
 	@FindBy(id = "j_id_t:j_id_1d") 
 	WebElement buttonSave;
 	
-	public NewApplicantPage setCI(String ci){
+	public NewApplicantPage() {
+		driver = SeleniumDriverManager.getManager().getDriver();
+		PageFactory.initElements(driver, this);
+	}
+	
+	public NewApplicantPage setCI(String ci) {
 		textBoxCI.sendKeys(ci);
 		return this;
 	}
 	
-	public NewApplicantPage setName(String name){
+	public NewApplicantPage setName(String name) {
 		textBoxName.sendKeys(name);
 		return this;
 	}
 	
-	public NewApplicantPage setLastName(String lastName){
+	public NewApplicantPage setLastName(String lastName) {
 		textBoxLastName.sendKeys(lastName);
 		return this;
 	}
 	
-	public NewApplicantPage setEMail(String eMail){
+	public NewApplicantPage setEMail(String eMail) {
 		textBoxEMail.sendKeys(eMail);
 		return this;
 	}
 	
-	public NewApplicantPage setCellphone(String cellphone){
+	public NewApplicantPage setCellphone(String cellphone) {
 		textBoxCellphone.sendKeys(cellphone);
 		return this;
 	}
 	
-	public PeriodDetailsPage clickSaveButton(){
+	public PeriodDetailsPage clickSaveButton() {
 		buttonSave.click();
 		return new PeriodDetailsPage();
 	}
 	
-	public PeriodDetailsPage createApplicant(String ci, String name, String lastName, String eMail, String cellphone){
+	public PeriodDetailsPage createApplicant(String ci, String name, String lastName, String eMail,
+											 String cellphone) {
 		setCI(ci);
 		setName(name);
 		setLastName(lastName);

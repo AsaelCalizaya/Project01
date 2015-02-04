@@ -17,9 +17,8 @@ import framework.utils.SeleniumDriverManager;
  * @author Asael Calizaya
  *
  */
-public class Navigation {
-	
-	protected WebDriver driver;
+public class Navigation {	
+	WebDriver driver;
 	
 	@FindBy(linkText = "Programas") 
 	WebElement programLink;
@@ -36,17 +35,17 @@ public class Navigation {
 	@FindBy(linkText = "Usuarios de Sistema Registrados") 
 	WebElement clickUsers;
 	
-	public Navigation(){
+	public Navigation() {
 		driver = SeleniumDriverManager.getManager().getDriver();
 		PageFactory.initElements(driver, this);
 	}
 	
-	public ProgramsPage clickProgramLink(){
+	public ProgramsPage clickProgramLink() {
 		programLink.click();
 		return new ProgramsPage();
 	}
 	
-	public PeriodPage clickPeriodLink(){
+	public PeriodPage clickPeriodLink() {
 		periodLink.click();
 		return new PeriodPage();
 	}
@@ -56,12 +55,12 @@ public class Navigation {
 		return new ApplicantPage();
 	}
 	
-	public StagePage clickStageLink(){
+	public StagePage clickStageLink() {
 		stageLink.click();
 		return new StagePage();
 	}
 	
-	public UsersPage clickUsersLink(){
+	public UsersPage clickUsersLink() {
 		clickUsers.click();
 		return new UsersPage();
 	}

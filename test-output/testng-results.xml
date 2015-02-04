@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="10" passed="10">
+<testng-results skipped="0" failed="1" total="10" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="JagdPantherSuit" duration-ms="62763" started-at="2015-02-01T23:13:42Z" finished-at="2015-02-01T23:14:45Z">
+  <suite name="JagdPantherSuit" duration-ms="66263" started-at="2015-02-04T14:12:22Z" finished-at="2015-02-04T14:13:28Z">
     <groups>
     </groups>
-    <test name="Suit 1" duration-ms="62763" started-at="2015-02-01T23:13:42Z" finished-at="2015-02-01T23:14:45Z">
+    <test name="Suit 1" duration-ms="66263" started-at="2015-02-04T14:12:22Z" finished-at="2015-02-04T14:13:28Z">
       <class name="test.VerifyIfStageWasCreated">
-        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@7857fe2]" name="createNewStage" duration-ms="3502" started-at="2015-02-01T19:14:24Z" data-provider="StagesDataXlsx" finished-at="2015-02-01T19:14:27Z">
+        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@7857fe2]" name="createNewStage" duration-ms="3976" started-at="2015-02-04T10:13:10Z" data-provider="StagesDataXlsx" finished-at="2015-02-04T10:13:14Z">
           <params>
             <param index="0">
               <value>
@@ -28,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewStage -->
-        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@7857fe2]" name="createNewStage" duration-ms="4554" started-at="2015-02-01T19:14:27Z" data-provider="StagesDataXlsx" finished-at="2015-02-01T19:14:32Z">
+        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@7857fe2]" name="createNewStage" duration-ms="3777" started-at="2015-02-04T10:13:14Z" data-provider="StagesDataXlsx" finished-at="2015-02-04T10:13:18Z">
           <params>
             <param index="0">
               <value>
@@ -51,17 +51,17 @@
         </test-method> <!-- createNewStage -->
       </class> <!-- test.VerifyIfStageWasCreated -->
       <class name="test.StartTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:test.StartTest@3932c79a]" name="init" is-config="true" duration-ms="1363" started-at="2015-02-01T19:13:40Z" finished-at="2015-02-01T19:13:42Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.StartTest@3932c79a]" name="init" is-config="true" duration-ms="1542" started-at="2015-02-04T10:12:20Z" finished-at="2015-02-04T10:12:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:test.StartTest@3932c79a]" name="quit" is-config="true" duration-ms="361" started-at="2015-02-01T19:14:45Z" finished-at="2015-02-01T19:14:45Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:test.StartTest@3932c79a]" name="quit" is-config="true" duration-ms="361" started-at="2015-02-04T10:13:28Z" finished-at="2015-02-04T10:13:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- test.StartTest -->
       <class name="test.VerifyIfPeriodWasCreated">
-        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@20b2475a]" name="createPeriod" duration-ms="7627" started-at="2015-02-01T19:13:53Z" data-provider="PeriodDataXlsx" finished-at="2015-02-01T19:14:00Z">
+        <test-method status="FAIL" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@20b2475a]" name="createPeriod" duration-ms="18101" started-at="2015-02-04T10:12:30Z" data-provider="PeriodDataXlsx" finished-at="2015-02-04T10:12:49Z">
           <params>
             <param index="0">
               <value>
@@ -74,10 +74,84 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 10.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: c47ffa63-a4e3-4ec7-9a50-c8a251a59a0d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+Command duration or timeout: 10.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: c47ffa63-a4e3-4ec7-9a50-c8a251a59a0d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
+	at com.sun.proxy.$Proxy6.getText(Unknown Source)
+	at framework.pages.period.PeriodDetailsPage.getPeriodName(PeriodDetailsPage.java:68)
+	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:8329:1)
+	at <anonymous class>.Utils.getElementAt(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous5069775262048166422webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:7922:10)
+	at <anonymous class>.WebElement.getElementText(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous5069775262048166422webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11065:11)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous5069775262048166422webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:16)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous5069775262048166422webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPeriod -->
-        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@20b2475a]" name="createPeriod" duration-ms="6747" started-at="2015-02-01T19:14:00Z" data-provider="PeriodDataXlsx" finished-at="2015-02-01T19:14:07Z">
+        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@20b2475a]" name="createPeriod" duration-ms="6956" started-at="2015-02-04T10:12:49Z" data-provider="PeriodDataXlsx" finished-at="2015-02-04T10:12:56Z">
           <params>
             <param index="0">
               <value>
@@ -95,7 +169,7 @@
         </test-method> <!-- createPeriod -->
       </class> <!-- test.VerifyIfPeriodWasCreated -->
       <class name="test.VerifyIfProgramWasCreated">
-        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@6f15d60e]" name="createProgram" duration-ms="4816" started-at="2015-02-01T19:13:44Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-01T19:13:48Z">
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@6f15d60e]" name="createProgram" duration-ms="3914" started-at="2015-02-04T10:12:23Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-04T10:12:27Z">
           <params>
             <param index="0">
               <value>
@@ -116,7 +190,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@6f15d60e]" name="createProgram" duration-ms="4315" started-at="2015-02-01T19:13:48Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-01T19:13:53Z">
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@6f15d60e]" name="createProgram" duration-ms="3799" started-at="2015-02-04T10:12:27Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-04T10:12:30Z">
           <params>
             <param index="0">
               <value>
@@ -139,7 +213,7 @@
         </test-method> <!-- createProgram -->
       </class> <!-- test.VerifyIfProgramWasCreated -->
       <class name="test.VerifyIfApplicantWasCreated">
-        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@210ab13f]" name="createApplicant" duration-ms="9403" started-at="2015-02-01T19:14:07Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-01T19:14:17Z">
+        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@210ab13f]" name="createApplicant" duration-ms="7383" started-at="2015-02-04T10:12:56Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-04T10:13:03Z">
           <params>
             <param index="0">
               <value>
@@ -170,7 +244,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createApplicant -->
-        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@210ab13f]" name="createApplicant" duration-ms="7121" started-at="2015-02-01T19:14:17Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-01T19:14:24Z">
+        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@210ab13f]" name="createApplicant" duration-ms="6804" started-at="2015-02-04T10:13:03Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-04T10:13:10Z">
           <params>
             <param index="0">
               <value>
@@ -203,7 +277,7 @@
         </test-method> <!-- createApplicant -->
       </class> <!-- test.VerifyIfApplicantWasCreated -->
       <class name="test.VerifyIfUserWasCreated">
-        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@1be2019a]" name="createNewUser" duration-ms="7489" started-at="2015-02-01T19:14:32Z" data-provider="UsersDataXlsx" finished-at="2015-02-01T19:14:39Z">
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@1be2019a]" name="createNewUser" duration-ms="5169" started-at="2015-02-04T10:13:18Z" data-provider="UsersDataXlsx" finished-at="2015-02-04T10:13:23Z">
           <params>
             <param index="0">
               <value>
@@ -229,7 +303,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUser -->
-        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@1be2019a]" name="createNewUser" duration-ms="5078" started-at="2015-02-01T19:14:39Z" data-provider="UsersDataXlsx" finished-at="2015-02-01T19:14:45Z">
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@1be2019a]" name="createNewUser" duration-ms="5039" started-at="2015-02-04T10:13:23Z" data-provider="UsersDataXlsx" finished-at="2015-02-04T10:13:28Z">
           <params>
             <param index="0">
               <value>

@@ -6,13 +6,13 @@ import org.testng.annotations.*;
 
 import framework.bd.*;
 import framework.pages.login.LoginPage;
+
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class StartTest {
-	
+public class StartTest {	
 	private LoginPage loginPage = new LoginPage();
 	private ConnectionBD delete = new ConnectionBD();
 	
@@ -30,9 +30,8 @@ public class StartTest {
 	 * @throws SQLException
 	 */
 	@AfterSuite
-    public void quit() throws SQLException{
-    	loginPage.quit();
-    	
+    public void quit() throws SQLException {
+    	loginPage.quit();    	
     	delete.DeletePerson();
     	delete.DeleteStage();
     	delete.DeletePeriod();

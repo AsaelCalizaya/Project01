@@ -16,7 +16,7 @@ import framework.utils.SeleniumDriverManager;
  */
 public class LoginPage {
 
-	protected WebDriver driver;
+	WebDriver driver;
 	
 	@FindBy(id="j_id_i:j_id_q") 
 	WebElement buttonLogin;

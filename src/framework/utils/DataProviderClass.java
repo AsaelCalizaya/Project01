@@ -10,7 +10,6 @@ import org.testng.annotations.DataProvider;
  *
  */
 public class DataProviderClass {
-
 	private static String filePath = "C:\\Users\\Asael Calizaya\\workspace\\jagdPanther\\src\\framework\\dataSource";
 	private static String fileName = "ExcelSource.xlsx";
 	private static ReadDataFromExcelFile objExcelFile;
@@ -42,7 +41,7 @@ public class DataProviderClass {
 	 * @return
 	 */
 	@DataProvider(name = "ApplicantDataXlsx")
-	public static Object[][] applicantData(){
+	public static Object[][] applicantData() {
 		return new Object[][]{
 				{"10001","NameApplicant","LastNameApplicant","Name1@LastName.com","777777771"},
 				{"10002","NameApplicante","LastNameApplicant","Name1@LastName2.com","777777772"}
@@ -65,10 +64,10 @@ public class DataProviderClass {
 	 * @return
 	 */
 	@DataProvider(name = "UsersDataXlsx")
-	public static Object[][] userData(){
+	public static Object[][] userData() {
 		return new Object[][] {
 				{"1234","userName1","userLastName1","user@lastName1.com"},
 				{"1235","userName2","userLastName2","user@lastName2.com"}
 		};
 	}
-} 
+}

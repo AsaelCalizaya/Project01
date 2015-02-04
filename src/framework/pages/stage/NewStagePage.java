@@ -1,54 +1,38 @@
 package framework.pages.stage;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-import framework.pages.navigation.Navigation;
+import framework.pages.common.NewProgramAndStage;
+import framework.utils.SeleniumDriverManager;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class NewStagePage extends Navigation {
-
-	@FindBy(id = "form:inputName")
-	WebElement textBoxName;
-		
-	@FindBy(id = "form:inputTitle")
-	WebElement textBoxTittle;
-		
-	@FindBy(id = "form:inputDescription")
-	WebElement textBoxDescription;
-		
+public class NewStagePage extends NewProgramAndStage {
 	@FindBy(id = "form:j_id_1k")
 	WebElement buttonSave;
-
 	
-	public StagePage saveButton(){
+	WebDriver driver;
+	
+	public NewStagePage() {
+		driver = SeleniumDriverManager.getManager().getDriver();
+		PageFactory.initElements(driver, this);
+	}
+	
+	public StagePage saveButton() {
 		buttonSave.click();
 		return new StagePage();
 	}
 	
-	public NewStagePage setname(String name){		
-		textBoxName.sendKeys(name);
-		return this;
-	}
-	
-	public NewStagePage settittle(String title){
-		textBoxTittle.sendKeys(title);
-		return this;
-	}
-	
-	public NewStagePage setDescription(String description){
-		textBoxDescription.sendKeys(description);
-		return this;
-	}
-	
-	public StagePage createNewStage(String name, String title,String description){
-		setname(name);
-		settittle(title);
+	public StagePage createNewStage(String name, String title,String description) {
 		setDescription(description);
+		setTitle(title);
+		setName(name);
 		saveButton();
 		return new StagePage();
 	}

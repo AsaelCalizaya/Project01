@@ -11,14 +11,9 @@
       </class> <!-- test.StartTest -->
       <class name="test.VerifyIfPeriodWasCreated">
         <methods>
-          <include name="createPeriod" invocation-numbers="0 1"/>
+          <include name="createPeriod" invocation-numbers="0"/>
         </methods>
       </class> <!-- test.VerifyIfPeriodWasCreated -->
-      <class name="test.VerifyIfProgramWasCreated">
-        <methods>
-          <include name="createProgram" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- test.VerifyIfProgramWasCreated -->
     </classes>
   </test> <!-- Suit 1(failed) -->
 </suite> <!-- Failed suite [JagdPantherSuit] -->

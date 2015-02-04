@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import framework.pages.login.LoginPage;
+
 /**
  * Title: Verify that an administrator can login
  * @author Asael Calizaya
@@ -18,7 +19,6 @@ public class Login {
 	 */
 	@Test
 	public void verifyLogin() {
-
 		loginPage.login("admin@admin.com","admin11");
 		Assert.assertTrue(loginPage.getResult("Admin Admin"));
 		loginPage.quit();

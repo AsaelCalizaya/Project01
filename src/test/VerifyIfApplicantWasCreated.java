@@ -3,8 +3,10 @@ package test;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
+import framework.pages.navigation.Navigation;
 import framework.pages.period.PeriodDetailsPage;
 import framework.utils.DataProviderClass;
+
 /**
  * Title: Register new applicant-JagdPanther allows create new applicants
  * @author Asael Calizaya
@@ -23,9 +25,8 @@ public class VerifyIfApplicantWasCreated {
 	 */
 	@Test(dataProvider = "ApplicantDataXlsx",dataProviderClass = DataProviderClass.class)
 	public void createApplicant(String ci,String name,String lastName,String eMail,String cellphone) {
-		
-		PeriodDetailsPage periodDetails = new PeriodDetailsPage();
-		PeriodDetailsPage periodDetail = periodDetails
+		Navigation navigation = new Navigation();
+		PeriodDetailsPage periodDetail = navigation
 				.clickPeriodLink()
 				.clickEditButton()
 				.clickApplicantButton()

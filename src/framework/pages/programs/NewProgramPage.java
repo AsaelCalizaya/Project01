@@ -1,55 +1,38 @@
 package framework.pages.programs;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-import framework.pages.navigation.Navigation;
+import framework.pages.common.NewProgramAndStage;
+import framework.utils.SeleniumDriverManager;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
-public class NewProgramPage extends Navigation {
-	
-	@FindBy(id = "form:inputName") 
-	WebElement textBoxName;
-	
-	@FindBy(id = "form:inputTitle") 
-	WebElement textBoxTitle;
-	
-	@FindBy(id = "form:inputDescription")
-	WebElement textBoxDescription;
+public class NewProgramPage extends NewProgramAndStage {
+	WebDriver driver;
 	
 	@FindBy(id = "form:j_id_18") 
 	WebElement buttonSave;
 	
-	public NewProgramPage setName(String name){
-		textBoxName.sendKeys(name);
-		return this;
+	public NewProgramPage() {
+		driver = SeleniumDriverManager.getManager().getDriver();
+		PageFactory.initElements(driver, this);
 	}
 	
-	public NewProgramPage setTitle(String title){
-		textBoxTitle.click();
-		textBoxTitle.clear();
-		textBoxTitle.sendKeys(title);
-		return this;
-	}
-	
-	public NewProgramPage setDescription(String description){
-		textBoxDescription.sendKeys(description);
-		return this;
-	}
-	
-	public ProgramDetailPage clickSaveButton(){
+	public ProgramDetailPage clickSaveButton() {
 		buttonSave.click();
 		return new ProgramDetailPage();
 	}
 	
-	public ProgramDetailPage createNewProgram(String name, String title, String description){
-		setName(name);
-		setTitle(title);
+	public ProgramDetailPage createNewProgram(String name, String title, String description) {
 		setDescription(description);
+		setTitle(title);
+		setName(name);
 		return clickSaveButton();
 	}
 }

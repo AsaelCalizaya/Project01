@@ -3,6 +3,8 @@ package framework.utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.log4testng.Logger;
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -56,8 +58,7 @@ public class SeleniumDriverManager {
 		try {
 			driver.quit();
 		} catch (Exception e) {
-			// Logger.getLogger(getClass()).error("Unable to quit the webdriver"
-			// , e);
+			Logger.getLogger(getClass()).error("Unable to quit the webdriver", e);
 		}
 		driver = null;
 	}

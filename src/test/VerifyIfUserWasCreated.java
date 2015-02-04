@@ -6,12 +6,14 @@ import org.testng.annotations.Test;
 import framework.pages.navigation.Navigation;
 import framework.pages.users.UsersPage;
 import framework.utils.DataProviderClass;
+
 /**
  * Title: Verify that a new user can be created
  * @author Asael Calizaya
  *
  */
 public class VerifyIfUserWasCreated {
+	
 	/**
 	 * Description: This test case is to verify that a new user can be created when
 	 * "Aniadir" button in users page is pressed
