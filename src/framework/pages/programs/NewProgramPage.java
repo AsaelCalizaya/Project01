@@ -37,9 +37,9 @@ public class NewProgramPage extends AbstractNewProgramAndStage implements INavig
 	 * @return: Return the program details
 	 */
 	public ProgramDetailPage createNewProgram(String name, String title, String description) {
+		setName(name);
 		setDescription(description);
 		setTitle(title);
-		setName(name);
 		return clickSaveButton();
 	}
 }

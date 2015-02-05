@@ -37,9 +37,9 @@ public class NewStagePage extends AbstractNewProgramAndStage implements INavigat
 	 * @return: the new stage page
 	 */
 	public StagePage createNewStage(String name, String title,String description) {
+		setName(name);
 		setDescription(description);
 		setTitle(title);
-		setName(name);
 		saveButton();
 		return new StagePage();
 	}	
