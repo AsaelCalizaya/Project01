@@ -23,8 +23,8 @@ public class ProgramsPage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on New program button
+	 * @return: The new programs page
 	 */
 	public NewProgramPage clickButtonNewProgram() {
 		buttonAdd.click();
@@ -32,8 +32,8 @@ public class ProgramsPage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on Detail program button
+	 * @return: a new Program detail page
 	 */
 	public ProgramDetailPage clickDetailProgram() {
 		buttonEdit.click();

@@ -23,8 +23,8 @@ public class StagePage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on add new stage button
+	 * @return: a New stage page to create stages
 	 */
 	public NewStagePage clickAddNewStageButton() {
 		newStageButton.click();
@@ -32,8 +32,8 @@ public class StagePage implements INavigation{
 	}
 
 	/**
-	 * 
-	 * @return
+	 * Get a array with all stages
+	 * @return: array with all information about stages
 	 */
 	public String getAllStages() {
 		return tableStage.getText();

@@ -20,11 +20,11 @@ public class PeriodPage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on edit button
+	 * @return: a new Period detail page 
 	 */
-	public PeriodDetailsPage clickEditButton() {
+	public PeriodDetailPage clickEditButton() {
 		editButton.click();
-		return new PeriodDetailsPage();
+		return new PeriodDetailPage();
 	}
 }

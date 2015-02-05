@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import framework.pages.navigation.INavigation;
-import framework.pages.period.PeriodDetailsPage;
+import framework.pages.period.PeriodDetailPage;
 
 /**
  * 
@@ -35,6 +35,11 @@ public class NewApplicantPage implements INavigation {
 		PageFactory.initElements(driver, this);
 	}
 	
+	/**
+	 * Set the CI of applicant
+	 * @param ci: applicant CI
+	 * @return: return this page
+	 */
 	public NewApplicantPage setCI(String ci) {
 		textBoxCI.sendKeys(ci);
 		return this;
@@ -45,36 +50,55 @@ public class NewApplicantPage implements INavigation {
 		return this;
 	}
 	
+	/**
+	 * Set LastName of applicant
+	 * @param lastName: applicant lastName
+	 * @return: return this page
+	 */
 	public NewApplicantPage setLastName(String lastName) {
 		textBoxLastName.sendKeys(lastName);
 		return this;
 	}
 	
+	/**
+	 * Set Email of applicant
+	 * @param eMail: applicant Email
+	 * @return: return this page
+	 */
 	public NewApplicantPage setEMail(String eMail) {
 		textBoxEMail.sendKeys(eMail);
 		return this;
 	}
 	
+	/**
+	 * Set the cellPhone of applicant
+	 * @param cellphone: applicant cellPhone
+	 * @return: return this page
+	 */
 	public NewApplicantPage setCellphone(String cellphone) {
 		textBoxCellphone.sendKeys(cellphone);
 		return this;
 	}
 	
-	public PeriodDetailsPage clickSaveButton() {
+	/**
+	 * Click on save button
+	 * @return: return period details page
+	 */
+	public PeriodDetailPage clickSaveButton() {
 		buttonSave.click();
-		return new PeriodDetailsPage();
+		return new PeriodDetailPage();
 	}
 	
 	/**
-	 * 
-	 * @param ci
-	 * @param name
-	 * @param lastName
-	 * @param eMail
-	 * @param cellphone
-	 * @return
+	 * Create new applicant setting the following parameters 
+	 * @param ci: applicant CI
+	 * @param name: applicant Name
+	 * @param lastName: applicant LastName
+	 * @param eMail: applicant Email
+	 * @param cellphone: applicant CellPhone
+	 * @return: return period detail page
 	 */
-	public PeriodDetailsPage createApplicant(String ci, String name, String lastName, String eMail,
+	public PeriodDetailPage createApplicant(String ci, String name, String lastName, String eMail,
 											 String cellphone) {
 		setCI(ci);
 		setName(name);

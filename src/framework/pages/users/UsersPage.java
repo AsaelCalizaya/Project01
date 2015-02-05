@@ -23,8 +23,8 @@ public class UsersPage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on add new user button
+	 * @return: New user page to create a user
 	 */
 	public NewUserPage clickAddNewUserButton() {
 		newUserButton.click();
@@ -32,8 +32,8 @@ public class UsersPage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Get all users
+	 * @return: An array of all users
 	 */
 	public String getUsers() {
 		return userTable.getText();

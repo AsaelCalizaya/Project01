@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import framework.pages.navigation.INavigation;
-import framework.pages.period.PeriodDetailsPage;
+import framework.pages.period.PeriodDetailPage;
 
 /**
  * 
@@ -27,8 +27,8 @@ public class ProgramDetailPage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on period button
+	 * @return: return this page
 	 */
 	public ProgramDetailPage clickPeriodButton() {
 		buttonPeriod.click();
@@ -36,17 +36,17 @@ public class ProgramDetailPage implements INavigation{
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on Add new period button
+	 * @return: return this page
 	 */
-	public PeriodDetailsPage clickAddNewPeriodButton() {
+	public PeriodDetailPage clickAddNewPeriodButton() {
 		buttonAddPeriod.click();
-		return new PeriodDetailsPage();
+		return new PeriodDetailPage();
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Get the table of all programs
+	 * @return: table of all programs
 	 */
 	public String getNameProgram() {
 		return programName.getText();

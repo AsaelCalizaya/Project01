@@ -32,8 +32,8 @@ public class NewUserPage implements INavigation {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Click on Save button
+	 * @return: a New user page
 	 */
 	public UsersPage clickSaveButton() {
 		buttonSave.click();
@@ -41,9 +41,9 @@ public class NewUserPage implements INavigation {
 	}
 	
 	/**
-	 * 
-	 * @param ci
-	 * @return
+	 * Set User CI
+	 * @param ci: user CI
+	 * @return: returns this page
 	 */
 	public NewUserPage setCI(String ci) {		
 		textBoxCI.sendKeys(ci);
@@ -51,9 +51,9 @@ public class NewUserPage implements INavigation {
 	}
 	
 	/**
-	 * 
-	 * @param name
-	 * @return
+	 * Set User Name
+	 * @param name: User name
+	 * @return: returns this page
 	 */
 	public NewUserPage setName(String name) {
 		textBoxName.sendKeys(name);
@@ -61,9 +61,9 @@ public class NewUserPage implements INavigation {
 	}
 
 	/**
-	 * 
-	 * @param lastName
-	 * @return
+	 * Set User LastName
+	 * @param lastName: User lastName
+	 * @return: returns this page
 	 */
 	public NewUserPage setLastName(String lastName) {
 		textBoxLastName.sendKeys(lastName);
@@ -71,9 +71,9 @@ public class NewUserPage implements INavigation {
 	}
 	
 	/**
-	 * 
-	 * @param eMail
-	 * @return
+	 * Set User Email
+	 * @param eMail: user email
+	 * @return: returns this page
 	 */
 	public NewUserPage setEmail(String eMail) {
 		textBoxEmail.sendKeys(eMail);
@@ -81,12 +81,12 @@ public class NewUserPage implements INavigation {
 	}
 	
 	/**
-	 * 
-	 * @param ci
-	 * @param Name
-	 * @param Lastname
-	 * @param email
-	 * @return
+	 * Create a new user with following parameters
+	 * @param ci: User CI
+	 * @param Name: User name
+	 * @param Lastname: User lastName 
+	 * @param email: User email
+	 * @return: The users page 
 	 */
 	public UsersPage createNewUser(String ci, String Name, String Lastname,String email) {
 		setCI(ci);

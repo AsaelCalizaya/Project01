@@ -15,7 +15,6 @@ import framework.utils.SeleniumDriverManager;
  *
  */
 public class LoginPage {
-
 	WebDriver driver;
 	
 	@FindBy(id="j_id_i:j_id_q") 
@@ -37,10 +36,10 @@ public class LoginPage {
 	}
 	
 	/**
-	 * 
-	 * @param user
-	 * @param pass
-	 * @return
+	 * Login with the following parameters
+	 * @param user: user name
+	 * @param pass: password
+	 * @return: return the users page
 	 */
 	public UsersPage login(String user , String pass) {
 		textBoxUser.sendKeys(user);
@@ -50,9 +49,11 @@ public class LoginPage {
 	}
 
 	/**
-	 * 
-	 * @param userName
-	 * @return
+	 * Verify if the user name if correct
+	 * @param userName: user name
+	 * @return: return a boolean value
+	 * True when the user name is correct
+	 * False when the user name is incorrect
 	 */
 	public Boolean getResult(String userName) {
 		return driver.findElement(By.linkText(userName)).isEnabled();
