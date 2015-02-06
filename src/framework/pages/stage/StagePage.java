@@ -33,7 +33,7 @@ public class StagePage implements INavigation{
 
 	/**
 	 * Get a array with all stages
-	 * @return: array with all information about stages
+	 * @return: Get string with all information about stages
 	 */
 	public String getAllStages() {
 		return tableStage.getText();

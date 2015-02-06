@@ -10,9 +10,9 @@ import java.sql.*;
 public class ConnectionBD {
       private static Connection con = null;
       private static Statement statement;
-      private static String dirDB = "jdbc:mysql://localhost/jagdpanther";   
-      private static String userDB = "panther";
-      private static String passDB = "panther11";
+      private static String DIR_DB = "jdbc:mysql://localhost/jagdpanther";   
+      private static String USER_DB = "panther";
+      private static String PASS_DB = "panther11";
       
       /**
        * This constructor initialize the connection with data base
@@ -21,7 +21,7 @@ public class ConnectionBD {
     	  try {
     		  String dbClass = "com.mysql.jdbc.Driver";
     		  Class.forName(dbClass).newInstance();
-    		  Connection con = DriverManager.getConnection(dirDB, userDB, passDB);
+    		  Connection con = DriverManager.getConnection(DIR_DB, USER_DB, PASS_DB);
     		  statement = con.createStatement();
     	  } catch (Exception e) {
     		  e.printStackTrace();

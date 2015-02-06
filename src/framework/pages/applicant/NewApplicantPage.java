@@ -45,6 +45,11 @@ public class NewApplicantPage implements INavigation {
 		return this;
 	}
 	
+	/**
+	 * Set the Name of Applicant
+	 * @param name: applicant Name
+	 * @return
+	 */
 	public NewApplicantPage setName(String name) {
 		textBoxName.sendKeys(name);
 		return this;

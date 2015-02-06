@@ -39,7 +39,7 @@ public class ReadDataFromExcelFile {
 		}
 		Sheet sheet = dataProviderResource.getSheet(sheetName);
 		int rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
-		Object[][] dataArray = new Object[rowCount+1][sheet.getRow(0).getLastCellNum()];
+		Object[][] dataArray = new Object[rowCount + 1][sheet.getRow(0).getLastCellNum()];
 		for (int i = 0; i < rowCount + 1; i++) {
 			Row row = sheet.getRow(i);
 			for (int j = 0; j < row.getLastCellNum(); j++) {

@@ -12,19 +12,19 @@ import framework.pages.navigation.INavigation;
  *
  */
 public class NewUserPage implements INavigation {
-	@FindBy(id="j_id_t:inputCi")
+	@FindBy(id = "j_id_t:inputCi")
 	WebElement textBoxCI;
 	
-	@FindBy(id="j_id_t:inputName")
+	@FindBy(id = "j_id_t:inputName")
 	WebElement textBoxName;
 	
-	@FindBy(id="j_id_t:inputLastName")
+	@FindBy(id = "j_id_t:inputLastName")
 	WebElement textBoxLastName;
 	
-	@FindBy(id="j_id_t:inputEmail")
+	@FindBy(id = "j_id_t:inputEmail")
 	WebElement textBoxEmail;
 	
-	@FindBy(id="j_id_t:j_id_1d")
+	@FindBy(id = "j_id_t:j_id_1d")
 	WebElement buttonSave;
 	
 	public NewUserPage() {
