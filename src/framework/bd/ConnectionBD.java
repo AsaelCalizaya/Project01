@@ -33,7 +33,7 @@ public class ConnectionBD {
        * @throws SQLException
        */
       public void DeletePeriod() throws SQLException {
-      	  DeleteData("jp_period","ID > 0");
+    	  DeleteData("jp_period","ID > 0");
       }
       
       /**
@@ -42,10 +42,10 @@ public class ConnectionBD {
        * @throws SQLException
        */
       public void DeletePerson() throws SQLException {
-      	  DeleteData("login_register","ID > 0");
-      	  DeleteData("user_period","APPLICANT_ID > 0");
-      	  DeleteData("message","ID > 0");
-      	  DeleteData("jp_user","CI != 123");
+    	  DeleteData("login_register","ID > 0");
+    	  DeleteData("user_period","APPLICANT_ID > 0");
+    	  DeleteData("message","ID > 0");
+    	  DeleteData("jp_user","CI != 123");
       }
       
       /**
@@ -53,17 +53,24 @@ public class ConnectionBD {
        * @throws SQLException
        */
       public void DeleteProgram() throws SQLException{
-      	  DeleteData("jp_period","PROGRAM_ID > 0");
+    	  DeletePeriod();
+    	  DeleteData("program","ID > 0");
       }
       
       /**
        * This method is to delete all Stages from data base 
        * @throws SQLException
        */
-      public void DeleteStage() throws SQLException {
+      public void DeleteStage() throws SQLException{
       	  DeleteData("stage","ID > 0");
       }
       
+      /**
+       * This method is to delete data from data base
+       * @param table: Table Name
+       * @param condition: Query Condition
+       * @throws SQLException
+       */
       private void DeleteData(String table, String condition) throws SQLException {
     	  try {
       		  String query = "DELETE FROM " + table + " WHERE " + condition + "";
