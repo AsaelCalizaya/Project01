@@ -1,8 +1,12 @@
 package test;
 
+import java.sql.SQLException;
+
 import org.junit.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
+import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
 import framework.pages.stage.StagePage;
 import framework.utils.DataProviderClass;
@@ -13,6 +17,7 @@ import framework.utils.DataProviderClass;
  *
  */
 public class VerifyIfStageWasCreated {
+	private ConnectionBD con = new ConnectionBD();
 	
 	/**
 	 * Description: This test case is to verify that a new stage can be create when 
@@ -30,5 +35,14 @@ public class VerifyIfStageWasCreated {
 	    	.clickAddNewStageButton()
 	    	.createNewStage(name, title, description);
 	    Assert.assertTrue(period.getAllStages().contains(name));
+    }
+    
+    /**
+     * Delete all Stages of BD
+     * @throws SQLException
+     */
+    @AfterClass
+    public void deleteData() throws SQLException {
+    	con.DeleteStage();
     }
 }

@@ -1,8 +1,11 @@
 package test;
 
+import java.sql.SQLException;
+
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
 import framework.pages.programs.ProgramDetailPage;
 import framework.utils.DataProviderClass;
@@ -13,6 +16,7 @@ import framework.utils.DataProviderClass;
  *
  */
 public class VerifyIfProgramWasCreated {
+	private ConnectionBD con = new ConnectionBD();
 	
 	/**
 	 * Description: This test case is to verify that a new program can be created
@@ -30,5 +34,14 @@ public class VerifyIfProgramWasCreated {
 	    		.clickButtonNewProgram()
 	    		.createNewProgram(name, title, description);
     	Assert.assertTrue(detailProgram.getNameProgram().contains(name));
+    }
+    
+    /**
+     * Delete all programs of BD
+     * @throws SQLException
+     */
+    @AfterClass
+    public void deleteData() throws SQLException {
+    	con.DeleteProgram();
     }
 }

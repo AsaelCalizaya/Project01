@@ -4,7 +4,6 @@ import java.sql.SQLException;
 
 import org.testng.annotations.*;
 
-import framework.bd.*;
 import framework.pages.login.LoginPage;
 
 /**
@@ -14,10 +13,10 @@ import framework.pages.login.LoginPage;
  */
 public class StartTest {	
 	private LoginPage loginPage = new LoginPage();
-	private ConnectionBD delete = new ConnectionBD();
 	
 	/**
 	 * Can login into JagdPanther like an administrator
+	 * @throws SQLException 
 	 */
 	@BeforeSuite
 	public void init() {
@@ -32,9 +31,5 @@ public class StartTest {
 	@AfterSuite
     public void quit() throws SQLException {
     	loginPage.quit();    	
-    	delete.DeletePerson();
-    	delete.DeleteStage();
-    	delete.DeletePeriod();
-    	delete.DeleteProgram();
     }
 }
