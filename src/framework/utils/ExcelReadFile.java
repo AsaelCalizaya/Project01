@@ -53,7 +53,6 @@ public class ExcelReadFile {
 	public Object[][] getObjectValues(String nameSheet) {
 		Sheet sheet = workBook.getSheet(nameSheet);
 		Object[][] values = new Object[sheet.getRows() - 1][sheet.getColumns()];
-		System.out.println(sheet.getRows() + "--" + sheet.getColumns());
 		for (int i = 1; i < sheet.getRows(); i++) {
 			for (int j = 0; j < sheet.getColumns(); j++) {
 				values[i - 1][j] = sheet.getCell (j, i).getContents();

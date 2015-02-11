@@ -20,11 +20,16 @@ public class ManageProgramsSuitSetup {
 	 */
 	public void CreateProgramsBD() throws SQLException, BiffException, IOException {
 		List<Map<String, String>> programsXLS;
-
 		ExcelReadFile xlsFile = new ExcelReadFile(filePath);
 		programsXLS = xlsFile.getMapValues("Programs");
-
 		createProgramsByBD(programsXLS);
+	}
+	
+	public void CreatePeriodBD() throws BiffException, IOException, SQLException {
+		List<Map<String, String>> periodsXLS;
+		ExcelReadFile xlsFile = new ExcelReadFile(filePath);
+		periodsXLS = xlsFile.getMapValues("PeriodsBD");
+		createPeriodsByBD(periodsXLS);
 	}
 	
 	/**
@@ -35,7 +40,15 @@ public class ManageProgramsSuitSetup {
 	private static void createProgramsByBD(List<Map<String, String>> programsXLS) throws SQLException {
 		System.out.println("Starting to create Programs......");
 		for (Map<String, String> programInfo : programsXLS)	{
-			con.CreateProgram(programInfo.get("programID"), programInfo.get("programName"), programInfo.get("programTitle"), programInfo.get("programDescription"));
+			con.CreateProgram(programInfo.get("programName"), programInfo.get("programTitle"), programInfo.get("programDescription"));
+		}
+		System.out.println("Finishing the creation of Programs......");
+	}
+	
+	private static void createPeriodsByBD(List<Map<String, String>> periodXLS) throws SQLException {
+		System.out.println("Starting to create Programs......");
+		for (Map<String, String> periodInfo : periodXLS)	{
+			con.CreatePeriod(periodInfo.get("Period StartDay"), periodInfo.get("Period Name"), periodInfo.get("Period State"));
 		}
 		System.out.println("Finishing the creation of Programs......");
 	}

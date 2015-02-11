@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="8" passed="6">
+<testng-results skipped="0" failed="4" total="9" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="JagdPantherSuit" duration-ms="57316" started-at="2015-02-11T01:40:08Z" finished-at="2015-02-11T01:41:05Z">
+  <suite name="JagdPantherSuit" duration-ms="72143" started-at="2015-02-11T19:35:08Z" finished-at="2015-02-11T19:36:20Z">
     <groups>
     </groups>
-    <test name="Acceptance test" duration-ms="57316" started-at="2015-02-11T01:40:08Z" finished-at="2015-02-11T01:41:05Z">
+    <test name="Acceptance test" duration-ms="72143" started-at="2015-02-11T19:35:08Z" finished-at="2015-02-11T19:36:20Z">
       <class name="test.VerifyIfStageWasCreated">
-        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="createNewStage" duration-ms="5690" started-at="2015-02-10T21:40:48Z" data-provider="StagesDataXlsx" finished-at="2015-02-10T21:40:54Z">
+        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="createNewStage" duration-ms="4840" started-at="2015-02-11T15:36:05Z" data-provider="StagesDataXlsx" finished-at="2015-02-11T15:36:10Z">
           <params>
             <param index="0">
               <value>
@@ -28,27 +28,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewStage -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="deleteData" is-config="true" duration-ms="63" started-at="2015-02-10T21:40:54Z" finished-at="2015-02-10T21:40:54Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="deleteData" is-config="true" duration-ms="44" started-at="2015-02-11T15:36:10Z" finished-at="2015-02-11T15:36:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->
       </class> <!-- test.VerifyIfStageWasCreated -->
       <class name="test.StartTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:test.StartTest@480d3575]" name="init" is-config="true" duration-ms="1355" started-at="2015-02-10T21:40:06Z" finished-at="2015-02-10T21:40:08Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.StartTest@480d3575]" name="init" is-config="true" duration-ms="2203" started-at="2015-02-11T15:35:06Z" finished-at="2015-02-11T15:35:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:test.StartTest@480d3575]" name="quit" is-config="true" duration-ms="215" started-at="2015-02-10T21:41:05Z" finished-at="2015-02-10T21:41:05Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:test.StartTest@480d3575]" name="quit" is-config="true" duration-ms="190" started-at="2015-02-11T15:36:21Z" finished-at="2015-02-11T15:36:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- test.StartTest -->
       <class name="test.VerifyIfPeriodWasCreated">
-        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="createProgram" is-config="true" duration-ms="183" started-at="2015-02-10T21:40:09Z" finished-at="2015-02-10T21:40:09Z">
+        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="createProgram" is-config="true" duration-ms="365" started-at="2015-02-11T15:35:18Z" finished-at="2015-02-11T15:35:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="FAIL" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="createPeriod" duration-ms="17618" started-at="2015-02-10T21:40:09Z" data-provider="PeriodDataXls" finished-at="2015-02-10T21:40:27Z">
+        <test-method status="FAIL" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="createPeriod" duration-ms="11168" started-at="2015-02-11T15:35:18Z" data-provider="PeriodDataXls" finished-at="2015-02-11T15:35:29Z">
           <params>
             <param index="0">
               <value>
@@ -61,26 +61,26 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 10.09 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+              <![CDATA[Unable to locate element: {"method":"id","selector":"j_id_y:programs:0:j_id_18"}
+Command duration or timeout: 10.89 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
 System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76]]>
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 10.09 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_y:programs:0:j_id_18"}
+Command duration or timeout: 10.89 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
 System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -88,16 +88,15 @@ Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
-	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at framework.pages.period.PeriodDetailPage.getPeriodName(PeriodDetailPage.java:94)
-	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:55)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.programs.ProgramsPage.clickDetailProgram(ProgramsPage.java:39)
+	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -122,23 +121,20 @@ Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_y:programs:0:j_id_18"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
 System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:8329:1)
-	at <anonymous class>.Utils.getElementAt(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:7922:10)
-	at <anonymous class>.WebElement.getElementText(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11065:11)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:16)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPeriod -->
-        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="createPeriod" duration-ms="6654" started-at="2015-02-10T21:40:27Z" data-provider="PeriodDataXls" finished-at="2015-02-10T21:40:34Z">
+        <test-method status="FAIL" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="createPeriod" duration-ms="10750" started-at="2015-02-11T15:35:30Z" data-provider="PeriodDataXls" finished-at="2015-02-11T15:35:41Z">
           <params>
             <param index="0">
               <value>
@@ -151,26 +147,50 @@ Driver info: driver.version: unknown
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createPeriod -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="deleteData" is-config="true" duration-ms="7" started-at="2015-02-10T21:40:34Z" finished-at="2015-02-10T21:40:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteData -->
-      </class> <!-- test.VerifyIfPeriodWasCreated -->
-      <class name="test.VerifyIfProgramWasCreated">
-        <test-method status="FAIL" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="createProgram" duration-ms="347" started-at="2015-02-10T21:40:08Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-10T21:40:08Z">
-          <exception class="org.testng.TestNGException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[
-The data provider is trying to pass 4 parameters but the method test.VerifyIfProgramWasCreated#createProgram takes 3]]>
+              <![CDATA[Unable to locate element: {"method":"id","selector":"j_id_y:programs:0:j_id_18"}
+Command duration or timeout: 10.39 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-The data provider is trying to pass 4 parameters but the method test.VerifyIfProgramWasCreated#createProgram takes 3
-	at org.testng.internal.Invoker.injectParameters(Invoker.java:1337)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1225)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_y:programs:0:j_id_18"}
+Command duration or timeout: 10.39 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.programs.ProgramsPage.clickDetailProgram(ProgramsPage.java:39)
+	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
@@ -187,23 +207,78 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_y:programs:0:j_id_18"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPeriod -->
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfPeriodWasCreated@5b7a7f33]" name="deleteData" is-config="true" duration-ms="2" started-at="2015-02-11T15:35:41Z" finished-at="2015-02-11T15:35:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteData -->
+      </class> <!-- test.VerifyIfPeriodWasCreated -->
+      <class name="test.VerifyIfProgramWasCreated">
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="createProgram" duration-ms="4519" started-at="2015-02-11T15:35:10Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-11T15:35:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NameProgram1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TitleProgram1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DescriptionProgram1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="deleteData" is-config="true" duration-ms="25" started-at="2015-02-10T21:40:09Z" finished-at="2015-02-10T21:40:09Z">
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="createProgram" duration-ms="3490" started-at="2015-02-11T15:35:14Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-11T15:35:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NameProgram2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[TitleProgram2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DescriptionProgram2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createProgram -->
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="deleteData" is-config="true" duration-ms="55" started-at="2015-02-11T15:35:18Z" finished-at="2015-02-11T15:35:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->
       </class> <!-- test.VerifyIfProgramWasCreated -->
       <class name="test.VerifyIfApplicantWasCreated">
-        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createProgram" is-config="true" duration-ms="6" started-at="2015-02-10T21:40:34Z" finished-at="2015-02-10T21:40:34Z">
+        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createProgram" is-config="true" duration-ms="333" started-at="2015-02-11T15:35:41Z" finished-at="2015-02-11T15:35:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createApplicant" duration-ms="7718" started-at="2015-02-10T21:40:34Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-10T21:40:41Z">
+        <test-method status="FAIL" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createApplicant" duration-ms="12162" started-at="2015-02-11T15:35:41Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-11T15:35:54Z">
           <params>
             <param index="0">
               <value>
@@ -231,10 +306,80 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"id","selector":"j_id_t:programs:0:j_id_17"}
+Command duration or timeout: 11.72 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_t:programs:0:j_id_17"}
+Command duration or timeout: 11.72 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.period.PeriodPage.clickEditButton(PeriodPage.java:27)
+	at test.VerifyIfApplicantWasCreated.createApplicant(VerifyIfApplicantWasCreated.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_t:programs:0:j_id_17"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createApplicant -->
-        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createApplicant" duration-ms="6285" started-at="2015-02-10T21:40:41Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-10T21:40:48Z">
+        <test-method status="FAIL" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createApplicant" duration-ms="10668" started-at="2015-02-11T15:35:54Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-11T15:36:04Z">
           <params>
             <param index="0">
               <value>
@@ -262,16 +407,86 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"id","selector":"j_id_t:programs:0:j_id_17"}
+Command duration or timeout: 10.37 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_t:programs:0:j_id_17"}
+Command duration or timeout: 10.37 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.period.PeriodPage.clickEditButton(PeriodPage.java:27)
+	at test.VerifyIfApplicantWasCreated.createApplicant(VerifyIfApplicantWasCreated.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"j_id_t:programs:0:j_id_17"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.44.0', revision: '76d78cf', time: '2014-10-23 20:03:00'
+System info: host: 'VDQADEV01-LT5YB', ip: '172.20.200.19', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_25'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createApplicant -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="deleteData" is-config="true" duration-ms="105" started-at="2015-02-10T21:40:48Z" finished-at="2015-02-10T21:40:48Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="deleteData" is-config="true" duration-ms="56" started-at="2015-02-11T15:36:05Z" finished-at="2015-02-11T15:36:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->
       </class> <!-- test.VerifyIfApplicantWasCreated -->
       <class name="test.VerifyIfUserWasCreated">
-        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="createNewUser" duration-ms="5152" started-at="2015-02-10T21:40:54Z" data-provider="UsersDataXlsx" finished-at="2015-02-10T21:40:59Z">
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="createNewUser" duration-ms="5583" started-at="2015-02-11T15:36:10Z" data-provider="UsersDataXlsx" finished-at="2015-02-11T15:36:15Z">
           <params>
             <param index="0">
               <value>
@@ -297,7 +512,7 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUser -->
-        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="createNewUser" duration-ms="6167" started-at="2015-02-10T21:40:59Z" data-provider="UsersDataXlsx" finished-at="2015-02-10T21:41:05Z">
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="createNewUser" duration-ms="5175" started-at="2015-02-11T15:36:15Z" data-provider="UsersDataXlsx" finished-at="2015-02-11T15:36:20Z">
           <params>
             <param index="0">
               <value>
@@ -323,7 +538,7 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUser -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="deleteData" is-config="true" duration-ms="17" started-at="2015-02-10T21:41:05Z" finished-at="2015-02-10T21:41:05Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="deleteData" is-config="true" duration-ms="52" started-at="2015-02-11T15:36:20Z" finished-at="2015-02-11T15:36:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->

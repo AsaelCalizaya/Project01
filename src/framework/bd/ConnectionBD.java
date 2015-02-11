@@ -92,8 +92,9 @@ public class ConnectionBD {
        * @param description: program Description
        * @throws SQLException
        */
-      public void CreateProgram(String id, String name, String title, String description) throws SQLException {
+      public void CreateProgram(String name, String title, String description) throws SQLException {
     	  try {
+    		  String id = getNextID("program");
       		  String query = "INSERT INTO program VALUES ('" + id + "', '" + description + "', '" + name + "', '" + title + "')";
       		  statement.execute(query);    
       	  } catch (Exception e) {
@@ -114,8 +115,10 @@ public class ConnectionBD {
        * @param programID: program Id where the period will be created
        * @throws SQLException
        */
-      public void CreatePeriod(String id, String initDate, String name, String periodState, String programID) throws SQLException {
+      public void CreatePeriod(String initDate, String name, String periodState) throws SQLException {
     	  try {
+    		  String id = getNextID("jp_period");
+    		  String programID = getfirstID("program");
       		  String query = "INSERT INTO jp_period(`ID`, `INITIALDATE`, `NAME`, `PERIODSTATE`, `PROGRAM_ID`) VALUES (" + id + ", '" + initDate + "', '" + name + "', '" + periodState + "', " + programID + ");";
       		  statement.execute(query);    
       	  } catch (Exception e) {
@@ -125,5 +128,43 @@ public class ConnectionBD {
       			  con.close();
       		  }
       	  }
+      }
+      
+      /**
+       * This method is to get the next usable Id
+       * @return
+       * @throws SQLException
+       */
+      private String getNextID(String table) throws SQLException {
+    	  String query = "SELECT id FROM " + table + " ORDER BY id DESC LIMIT 1";
+    	  String value = "";
+    	  ResultSet res = statement.executeQuery(query);
+    	  while(res.next()) {
+				value = res.getString(1);
+				if (value == null) {
+					value = "1";
+				}
+				value = (Integer.parseInt(value) + 1) + "";
+			}
+    	  return value;
+      }
+      
+      /**
+       * This method is to get the first id 
+       * @param table
+       * @return
+       * @throws SQLException
+       */
+      private String getfirstID(String table) throws SQLException {
+    	  String query = "SELECT id FROM " + table + " ORDER BY id asc LIMIT 1";
+    	  String value = "";
+    	  ResultSet res = statement.executeQuery(query);
+    	  while(res.next()) {
+				value = res.getString(1);
+				if (value == null) {
+					value = "1";
+				}
+			}
+    	  return value;
       }
 }

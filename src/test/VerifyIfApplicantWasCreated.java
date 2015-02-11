@@ -1,6 +1,9 @@
 package test;
 
+import java.io.IOException;
 import java.sql.SQLException;
+
+import jxl.read.biff.BiffException;
 
 import org.junit.Assert;
 import org.testng.annotations.AfterClass;
@@ -9,6 +12,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
+import framework.bd.ManageProgramsSuitSetup;
 import framework.pages.HomePage;
 import framework.pages.period.PeriodDetailPage;
 import framework.utils.DataProviderClass;
@@ -26,11 +30,14 @@ public class VerifyIfApplicantWasCreated {
 	/**
 	 * Create precondition to create an applicant
 	 * @throws SQLException
+	 * @throws IOException 
+	 * @throws BiffException 
 	 */
 	@BeforeClass
-	public void createProgram() throws SQLException {
-		con.CreateProgram("1", "program1", "program1", "description1");
-		con.CreatePeriod("1", "2015-02-02", "period1", "Active", "1");
+	public void createProgram() throws SQLException, BiffException, IOException {
+		ManageProgramsSuitSetup programCreation = new ManageProgramsSuitSetup();
+		programCreation.CreateProgramsBD();
+		programCreation.CreatePeriodBD();
 	}
 	
 	/**

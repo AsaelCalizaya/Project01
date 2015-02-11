@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Acceptance test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 10 21:40:08 BOT 2015</td>
+<td>Started on:</td><td>Wed Feb 11 15:35:08 BOT 2015</td>
 </tr>
-<tr><td>Total time:</td><td>57 seconds (57316 ms)</td>
+<tr><td>Total time:</td><td>72 seconds (72143 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,43 +75,43 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod1, 1/2/2015</td>
-<td><div><pre>org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 10.09 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+<td title='test.VerifyIfApplicantWasCreated.createApplicant()'><b>createApplicant</b><br>Test class: test.VerifyIfApplicantWasCreated<br>Parameters: 10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+Command duration or timeout: 11.72 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
 System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
-	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at framework.pages.period.PeriodDetailPage.getPeriodName(PeriodDetailPage.java:94)
-	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:55)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.period.PeriodPage.clickEditButton(PeriodPage.java:27)
+	at test.VerifyIfApplicantWasCreated.createApplicant(VerifyIfApplicantWasCreated.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
 System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:8329:1)
-	at &lt;anonymous class&gt;.Utils.getElementAt(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:7922:10)
-	at &lt;anonymous class&gt;.WebElement.getElementText(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11065:11)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:16)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace315805187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace315805187'><pre>org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-Command duration or timeout: 10.09 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace409598930", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace409598930'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+Command duration or timeout: 11.72 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
 System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -119,16 +119,15 @@ Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:152)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
-	at com.sun.proxy.$Proxy9.getText(Unknown Source)
-	at framework.pages.period.PeriodDetailPage.getPeriodName(PeriodDetailPage.java:94)
-	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:55)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.period.PeriodPage.clickEditButton(PeriodPage.java:27)
+	at test.VerifyIfApplicantWasCreated.createApplicant(VerifyIfApplicantWasCreated.java:57)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -153,28 +152,78 @@ Session ID: 5ada1a78-be0d-4fa0-89ea-fa8c688e5f76
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.StaleElementReferenceException: Element not found in the cache - perhaps the page has changed since it was looked up
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
 System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.cache.getElementAt(resource://fxdriver/modules/web-element-cache.js:8329:1)
-	at &lt;anonymous class&gt;.Utils.getElementAt(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:7922:10)
-	at &lt;anonymous class&gt;.WebElement.getElementText(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11065:11)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:11635:16)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous7925507119553395378webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:548:5)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
 </pre></div></td>
-<td>17</td>
-<td>test.VerifyIfPeriodWasCreated@5b7a7f33</td></tr>
+<td>12</td>
+<td>test.VerifyIfApplicantWasCreated@5e7cd6cc</td></tr>
 <tr>
-<td title='test.VerifyIfProgramWasCreated.createProgram()'><b>createProgram</b><br>Test class: test.VerifyIfProgramWasCreated</td>
-<td><div><pre>org.testng.TestNGException: 
-The data provider is trying to pass 4 parameters but the method test.VerifyIfProgramWasCreated#createProgram takes 3
-... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1142347343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1142347343'><pre>org.testng.TestNGException: 
-The data provider is trying to pass 4 parameters but the method test.VerifyIfProgramWasCreated#createProgram takes 3
-	at org.testng.internal.Invoker.injectParameters(Invoker.java:1337)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1225)
+<td title='test.VerifyIfApplicantWasCreated.createApplicant()'><b>createApplicant</b><br>Test class: test.VerifyIfApplicantWasCreated<br>Parameters: 10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+Command duration or timeout: 10.37 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.period.PeriodPage.clickEditButton(PeriodPage.java:27)
+	at test.VerifyIfApplicantWasCreated.createApplicant(VerifyIfApplicantWasCreated.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1361817590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1361817590'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+Command duration or timeout: 10.37 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.period.PeriodPage.clickEditButton(PeriodPage.java:27)
+	at test.VerifyIfApplicantWasCreated.createApplicant(VerifyIfApplicantWasCreated.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
 	at org.testng.TestRunner.privateRun(TestRunner.java:767)
@@ -191,9 +240,192 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_t:programs:0:j_id_17&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
 </pre></div></td>
-<td>0</td>
-<td>test.VerifyIfProgramWasCreated@5fb759d6</td></tr>
+<td>10</td>
+<td>test.VerifyIfApplicantWasCreated@5e7cd6cc</td></tr>
+<tr>
+<td title='test.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod1, 1/2/2015</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+Command duration or timeout: 10.89 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.programs.ProgramsPage.clickDetailProgram(ProgramsPage.java:39)
+	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:50)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1530295320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1530295320'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+Command duration or timeout: 10.89 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.programs.ProgramsPage.clickDetailProgram(ProgramsPage.java:39)
+	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+</pre></div></td>
+<td>11</td>
+<td>test.VerifyIfPeriodWasCreated@5b7a7f33</td></tr>
+<tr>
+<td title='test.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod2, 1/3/2015</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+Command duration or timeout: 10.39 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.programs.ProgramsPage.clickDetailProgram(ProgramsPage.java:39)
+	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:50)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace275563320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace275563320'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+Command duration or timeout: 10.39 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=35.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: da55a7cf-7081-4489-9ba9-00bf6b30cf8c
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at framework.pages.programs.ProgramsPage.clickDetailProgram(ProgramsPage.java:39)
+	at test.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;j_id_y:programs:0:j_id_18&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:9641:26)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/ASAELC~1/AppData/Local/Temp/anonymous4655604708823110263webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:548:5)
+</pre></div></td>
+<td>10</td>
+<td>test.VerifyIfPeriodWasCreated@5b7a7f33</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -203,19 +435,9 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.VerifyIfApplicantWasCreated.createApplicant()'><b>createApplicant</b><br>Test class: test.VerifyIfApplicantWasCreated<br>Parameters: 10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771</td>
-<td></td>
-<td>7</td>
-<td>test.VerifyIfApplicantWasCreated@5e7cd6cc</td></tr>
-<tr>
-<td title='test.VerifyIfApplicantWasCreated.createApplicant()'><b>createApplicant</b><br>Test class: test.VerifyIfApplicantWasCreated<br>Parameters: 10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772</td>
-<td></td>
-<td>6</td>
-<td>test.VerifyIfApplicantWasCreated@5e7cd6cc</td></tr>
-<tr>
 <td title='test.VerifyIfStageWasCreated.createNewStage()'><b>createNewStage</b><br>Test class: test.VerifyIfStageWasCreated<br>Parameters: stagename2, stageTitle2, stageDescription2</td>
 <td></td>
-<td>5</td>
+<td>4</td>
 <td>test.VerifyIfStageWasCreated@4b8d604b</td></tr>
 <tr>
 <td title='test.VerifyIfUserWasCreated.createNewUser()'><b>createNewUser</b><br>Test class: test.VerifyIfUserWasCreated<br>Parameters: 1234, userName1, userLastName1, user@lastName1.com</td>
@@ -225,13 +447,18 @@ The data provider is trying to pass 4 parameters but the method test.VerifyIfPro
 <tr>
 <td title='test.VerifyIfUserWasCreated.createNewUser()'><b>createNewUser</b><br>Test class: test.VerifyIfUserWasCreated<br>Parameters: 1235, userName2, userLastName2, user@lastName2.com</td>
 <td></td>
-<td>6</td>
+<td>5</td>
 <td>test.VerifyIfUserWasCreated@57bc27f5</td></tr>
 <tr>
-<td title='test.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod2, 1/3/2015</td>
+<td title='test.VerifyIfProgramWasCreated.createProgram()'><b>createProgram</b><br>Test class: test.VerifyIfProgramWasCreated<br>Parameters: NameProgram1, TitleProgram1, DescriptionProgram1</td>
 <td></td>
-<td>6</td>
-<td>test.VerifyIfPeriodWasCreated@5b7a7f33</td></tr>
+<td>4</td>
+<td>test.VerifyIfProgramWasCreated@5fb759d6</td></tr>
+<tr>
+<td title='test.VerifyIfProgramWasCreated.createProgram()'><b>createProgram</b><br>Test class: test.VerifyIfProgramWasCreated<br>Parameters: NameProgram2, TitleProgram2, DescriptionProgram2</td>
+<td></td>
+<td>3</td>
+<td>test.VerifyIfProgramWasCreated@5fb759d6</td></tr>
 </table><p>
 </body>
 </html>

@@ -11,7 +11,7 @@
       </class> <!-- test.StartTest -->
       <class name="test.VerifyIfPeriodWasCreated">
         <methods>
-          <include name="createPeriod" invocation-numbers="0"/>
+          <include name="createPeriod" invocation-numbers="0 1"/>
           <include name="createProgram"/>
           <include name="deleteData"/>
         </methods>
@@ -24,7 +24,6 @@
       <class name="test.VerifyIfProgramWasCreated">
         <methods>
           <include name="deleteData"/>
-          <include name="createProgram"/>
         </methods>
       </class> <!-- test.VerifyIfProgramWasCreated -->
       <class name="test.VerifyIfStageWasCreated">
@@ -36,6 +35,7 @@
         <methods>
           <include name="createProgram"/>
           <include name="deleteData"/>
+          <include name="createApplicant" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- test.VerifyIfApplicantWasCreated -->
     </classes>
