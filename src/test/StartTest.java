@@ -5,12 +5,14 @@ import java.sql.SQLException;
 import org.testng.annotations.*;
 
 import framework.pages.login.LoginPage;
+import framework.utils.reporter.JyperionListener;
 
 /**
  * 
  * @author Asael Calizaya
  *
  */
+@Listeners(JyperionListener.class)
 public class StartTest {	
 	private LoginPage loginPage = new LoginPage();
 	

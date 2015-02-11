@@ -2,6 +2,8 @@ package framework.utils;
 
 import java.io.IOException;
 
+import jxl.read.biff.BiffException;
+
 import org.testng.annotations.DataProvider;
 
 /**
@@ -10,30 +12,31 @@ import org.testng.annotations.DataProvider;
  *
  */
 public class DataProviderClass {
-	private static String filePath = "C:\\Users\\Asael Calizaya\\workspace\\jagdPanther\\src\\framework\\dataSource";
-	private static String fileName = "ExcelSource.xlsx";
-	private static ReadDataFromExcelFile objExcelFile;
+	private static String filePath = "C:\\Users\\Asael Calizaya\\workspace\\jagdPanther\\src\\framework\\dataSource\\ExcelSource.xls";
+	private static ExcelReadFile objExcelFile;
 	
 	/**
 	 * This method return data from the XLSX files to Create programs
 	 * @return
 	 * @throws IOException
+	 * @throws BiffException 
 	 */
 	@DataProvider(name = "ProgramsDataXlsx")
-	public static Object[][] programData() throws IOException {
-		objExcelFile = new ReadDataFromExcelFile();
-		return objExcelFile.readExcel(filePath,fileName,"Programs");
+	public static Object[][] programData() throws IOException, BiffException {
+		objExcelFile = new ExcelReadFile(filePath);
+		return objExcelFile.getObjectValues("Programs");
 	}
 	
 	/**
 	 * This method return data from the XLSX files to Create Periods
 	 * @return
 	 * @throws IOException
+	 * @throws BiffException 
 	 */
-	@DataProvider(name = "PeriodDataXlsx")
-	public static Object[][] periodData() throws IOException {
-		objExcelFile = new ReadDataFromExcelFile();
-		return objExcelFile.readExcel(filePath,fileName,"Periods");
+	@DataProvider(name = "PeriodDataXls")
+	public static Object[][] periodData() throws IOException, BiffException {
+		objExcelFile = new ExcelReadFile(filePath);
+		return objExcelFile.getObjectValues("Periods");
 	}
 	
 	/**
@@ -52,11 +55,12 @@ public class DataProviderClass {
 	 * This method return data from the XLSX files to Create Stages
 	 * @return
 	 * @throws IOException
+	 * @throws BiffException 
 	 */
 	@DataProvider(name = "StagesDataXlsx")
-	public static Object[][] stageData() throws IOException {
-		objExcelFile = new ReadDataFromExcelFile();
-		return objExcelFile.readExcel(filePath,fileName,"Stages");
+	public static Object[][] stageData() throws IOException, BiffException {
+		objExcelFile = new ExcelReadFile(filePath);
+		return objExcelFile.getObjectValues("Stages");
 	}
 	
 	/**

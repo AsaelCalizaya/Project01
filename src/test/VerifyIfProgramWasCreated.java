@@ -9,12 +9,14 @@ import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
 import framework.pages.programs.ProgramDetailPage;
 import framework.utils.DataProviderClass;
+import framework.utils.reporter.JyperionListener;
 
 /**
  * Title: Verify if that a new program can be created
  * @author Asael Calizaya
  *
  */
+@Listeners(JyperionListener.class)
 public class VerifyIfProgramWasCreated {
 	private ConnectionBD con = new ConnectionBD();
 	

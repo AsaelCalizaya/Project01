@@ -5,18 +5,21 @@ import java.sql.SQLException;
 import org.junit.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
 import framework.pages.period.PeriodDetailPage;
 import framework.utils.DataProviderClass;
+import framework.utils.reporter.JyperionListener;
 
 /**
  * Title: Register new applicant-JagdPanther allows create new applicants
  * @author Asael Calizaya
  *
  */
+@Listeners(JyperionListener.class)
 public class VerifyIfApplicantWasCreated {
 	private ConnectionBD con = new ConnectionBD();
 	

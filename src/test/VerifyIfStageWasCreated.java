@@ -4,18 +4,21 @@ import java.sql.SQLException;
 
 import org.junit.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
 import framework.pages.stage.StagePage;
 import framework.utils.DataProviderClass;
+import framework.utils.reporter.JyperionListener;
 
 /**
  * Title: Verify that a new Stage can be created
  * @author Asael Calizaya
  *
  */
+@Listeners(JyperionListener.class)
 public class VerifyIfStageWasCreated {
 	private ConnectionBD con = new ConnectionBD();
 	

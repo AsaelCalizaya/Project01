@@ -4,18 +4,21 @@ import java.sql.SQLException;
 
 import org.junit.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
 import framework.pages.users.UsersPage;
 import framework.utils.DataProviderClass;
+import framework.utils.reporter.JyperionListener;
 
 /**
  * Title: Verify that a new user can be created
  * @author Asael Calizaya
  *
  */
+@Listeners(JyperionListener.class)
 public class VerifyIfUserWasCreated {
 	private ConnectionBD con = new ConnectionBD();
 	

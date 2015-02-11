@@ -1,30 +1,39 @@
 package test;
 
+import java.io.IOException;
 import java.sql.SQLException;
+
+import jxl.read.biff.BiffException;
 
 import org.junit.Assert;
 import org.testng.annotations.*;
 
 import framework.bd.ConnectionBD;
+import framework.bd.ManageProgramsSuitSetup;
 import framework.pages.HomePage;
 import framework.pages.period.PeriodDetailPage;
 import framework.utils.DataProviderClass;
+import framework.utils.reporter.JyperionListener;
 
 /**
  * Title: Verify that a new period can be created in a program
  * @author Asael Calizaya
  *
  */
+@Listeners(JyperionListener.class)
 public class VerifyIfPeriodWasCreated {
 	private ConnectionBD con = new ConnectionBD();
 	
 	/**
 	 * Create precondition to create periods
+	 * @throws BiffException 
+	 * @throws IOException 
 	 * @throws SQLException
 	 */
 	@BeforeClass
-	public void createProgram() throws SQLException {
-		con.CreateProgram("1", "program1", "program1", "description1");
+	public void createProgram() throws BiffException, SQLException, IOException {
+		ManageProgramsSuitSetup programCreation = new ManageProgramsSuitSetup();
+		programCreation.CreateProgramsBD();
 	}
 	
 	/**
@@ -32,8 +41,9 @@ public class VerifyIfPeriodWasCreated {
 	 * @param name
 	 * @param startDate
 	 */
-	@Test(dataProvider = "PeriodDataXlsx",dataProviderClass = DataProviderClass.class)
+	@Test(dataProvider = "PeriodDataXls", dataProviderClass = DataProviderClass.class)
 	public void createPeriod(String name, String startDate) {
+		System.out.println(name + "---" + startDate);
 		HomePage home = new HomePage();
 		PeriodDetailPage detailPage = home
 				.clickProgramLink()
