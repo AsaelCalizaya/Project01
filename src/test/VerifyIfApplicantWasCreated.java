@@ -6,8 +6,8 @@ import java.sql.SQLException;
 import jxl.read.biff.BiffException;
 
 import org.junit.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -33,7 +33,7 @@ public class VerifyIfApplicantWasCreated {
 	 * @throws IOException 
 	 * @throws BiffException 
 	 */
-	@BeforeClass
+	@BeforeMethod
 	public void createProgram() throws SQLException, BiffException, IOException {
 		ManageProgramsSuitSetup programCreation = new ManageProgramsSuitSetup();
 		programCreation.CreateProgramsBD();
@@ -65,7 +65,7 @@ public class VerifyIfApplicantWasCreated {
 	 * Delete all applicants on BD
 	 * @throws SQLException
 	 */
-	@AfterClass
+	@AfterMethod
 	public void deleteData() throws SQLException {
 		con.DeletePerson();
 		con.DeletePeriod();

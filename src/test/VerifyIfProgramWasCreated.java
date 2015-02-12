@@ -3,7 +3,9 @@ package test;
 import java.sql.SQLException;
 
 import org.testng.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
@@ -42,7 +44,7 @@ public class VerifyIfProgramWasCreated {
      * Delete all programs of BD
      * @throws SQLException
      */
-    @AfterClass
+    @AfterMethod
     public void deleteData() throws SQLException {
     	con.DeleteProgram();
     }

@@ -8,163 +8,164 @@ import java.sql.*;
  *
  */
 public class ConnectionBD {
-      private static Connection con = null;
-      private static Statement statement;
-      private static String DIR_DB = "jdbc:mysql://localhost/jagdpanther";   
-      private static String USER_DB = "panther";
-      private static String PASS_DB = "panther11";
-      
-      /**
-       * This constructor initialize the connection with data base
-       */
-      public ConnectionBD() {
-    	  try {
-    		  String dbClass = "com.mysql.jdbc.Driver";
-    		  Class.forName(dbClass).newInstance();
-    		  Connection con = DriverManager.getConnection(DIR_DB, USER_DB, PASS_DB);
-    		  statement = con.createStatement();
-    	  } catch (Exception e) {
-    		  e.printStackTrace();
-    	  }
-      }
-      
-      /**
-       * This method is to delete all periods from data base
-       * @throws SQLException
-       */
-      public void DeletePeriod() throws SQLException {
-    	  DeleteData("jp_period","ID > 0");
-      }
-      
-      /**
-       * This method is to delete all applicants and users from data base 
-       * except the admin user
-       * @throws SQLException
-       */
-      public void DeletePerson() throws SQLException {
-    	  DeleteData("login_register","ID > 0");
-    	  DeleteData("user_period","APPLICANT_ID > 0");
-    	  DeleteData("message","ID > 0");
-    	  DeleteData("jp_user","CI != 123");
-      }
-      
-      /**
-       * This method is to delete all programs from data base 
-       * @throws SQLException
-       */
-      public void DeleteProgram() throws SQLException{
-    	  DeletePeriod();
-    	  DeleteData("program","ID > 0");
-      }
-      
-      /**
-       * This method is to delete all Stages from data base 
-       * @throws SQLException
-       */
-      public void DeleteStage() throws SQLException{
-      	  DeleteData("stage","ID > 0");
-      }
-      
-      /**
-       * This method is to delete data from data base
-       * @param table: Table Name
-       * @param condition: Query Condition
-       * @throws SQLException
-       */
-      private void DeleteData(String table, String condition) throws SQLException {
-    	  try {
-      		  String query = "DELETE FROM " + table + " WHERE " + condition + "";
-      		  statement.execute(query);    
-      	  } catch (Exception e) {
-      		  e.printStackTrace();
-      	  } finally {
-      		  if (con != null) {
-      			  con.close();
-      		  }
-      	  }
-      }
+	private static Connection con = null;
+	private static Statement statement;
+	private static String DIR_DB = "jdbc:mysql://localhost/jagdpanther";   
+	private static String USER_DB = "panther";
+	private static String PASS_DB = "panther11";
 
-      /**
-       *  This method is to create a new program
-       * @param id: program ID
-       * @param name: program Name
-       * @param title: program Title
-       * @param description: program Description
-       * @throws SQLException
-       */
-      public void CreateProgram(String name, String title, String description) throws SQLException {
-    	  try {
-    		  String id = getNextID("program");
-      		  String query = "INSERT INTO program VALUES ('" + id + "', '" + description + "', '" + name + "', '" + title + "')";
-      		  statement.execute(query);    
-      	  } catch (Exception e) {
-      		  e.printStackTrace();
-      	  } finally {
-      		  if (con != null) {
-      			  con.close();
-      		  }
-      	  }
-      }
-      
-      /**
-       *  This method is to create a new period
-       * @param id: period ID
-       * @param initDate: initial date to period
-       * @param name: period name
-       * @param periodState: period state
-       * @param programID: program Id where the period will be created
-       * @throws SQLException
-       */
-      public void CreatePeriod(String initDate, String name, String periodState) throws SQLException {
-    	  try {
-    		  String id = getNextID("jp_period");
-    		  String programID = getfirstID("program");
-      		  String query = "INSERT INTO jp_period(`ID`, `INITIALDATE`, `NAME`, `PERIODSTATE`, `PROGRAM_ID`) VALUES (" + id + ", '" + initDate + "', '" + name + "', '" + periodState + "', " + programID + ");";
-      		  statement.execute(query);    
-      	  } catch (Exception e) {
-      		  e.printStackTrace();
-      	  } finally {
-      		  if (con != null) {
-      			  con.close();
-      		  }
-      	  }
-      }
-      
-      /**
-       * This method is to get the next usable Id
-       * @return
-       * @throws SQLException
-       */
-      private String getNextID(String table) throws SQLException {
-    	  String query = "SELECT id FROM " + table + " ORDER BY id DESC LIMIT 1";
-    	  String value = "";
-    	  ResultSet res = statement.executeQuery(query);
-    	  while(res.next()) {
-				value = res.getString(1);
-				if (value == null) {
-					value = "1";
-				}
-				value = (Integer.parseInt(value) + 1) + "";
+	/**
+	 * This constructor initialize the connection with data base
+	 */
+	public ConnectionBD() {
+		try {
+			String dbClass = "com.mysql.jdbc.Driver";
+			Class.forName(dbClass).newInstance();
+			Connection con = DriverManager.getConnection(DIR_DB, USER_DB, PASS_DB);
+			statement = con.createStatement();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * This method is to delete all periods from data base
+	 * @throws SQLException
+	 */
+	public void DeletePeriod() throws SQLException {
+		DeleteData("jp_period","ID > 0");
+	}
+
+	/**
+	 * This method is to delete all applicants and users from data base 
+	 * except the admin user
+	 * @throws SQLException
+	 */
+	public void DeletePerson() throws SQLException {
+		DeleteData("login_register","ID > 0");
+		DeleteData("user_period","APPLICANT_ID > 0");
+		DeleteData("message","ID > 0");
+		DeleteData("jp_user","CI != 123");
+	}
+
+	/**
+	 * This method is to delete all programs from data base 
+	 * @throws SQLException
+	 */
+	public void DeleteProgram() throws SQLException{
+		DeletePeriod();
+		DeleteData("program","ID > 0");
+	}
+
+	/**
+	 * This method is to delete all Stages from data base 
+	 * @throws SQLException
+	 */
+	public void DeleteStage() throws SQLException{
+		DeleteData("stage","ID > 0");
+	}
+
+	/**
+	 * This method is to delete data from data base
+	 * @param table: Table Name
+	 * @param condition: Query Condition
+	 * @throws SQLException
+	 */
+	private void DeleteData(String table, String condition) throws SQLException {
+		try {
+			String query = "DELETE FROM " + table + " WHERE " + condition + "";
+			statement.execute(query);    
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				con.close();
 			}
-    	  return value;
-      }
-      
-      /**
-       * This method is to get the first id 
-       * @param table
-       * @return
-       * @throws SQLException
-       */
-      private String getfirstID(String table) throws SQLException {
-    	  String query = "SELECT id FROM " + table + " ORDER BY id asc LIMIT 1";
-    	  String value = "";
-    	  ResultSet res = statement.executeQuery(query);
-    	  while(res.next()) {
-				value = res.getString(1);
-				if (value == null) {
-					value = "1";
-				}
+		}
+	}
+
+	/**
+	 *  This method is to create a new program
+	 * @param id: program ID
+	 * @param name: program Name
+	 * @param title: program Title
+	 * @param description: program Description
+	 * @throws SQLException
+	 */
+	public void CreateProgram(String name, String title, String description) throws SQLException {
+		try {
+			String id = getNextID("program");
+			String query = "INSERT INTO program VALUES ('" + id + "', '" + description + "', '" + name + "', '" + title + "')";
+			statement.execute(query);    
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				con.close();
 			}
-    	  return value;
-      }
+		}
+	}
+
+	/**
+	 *  This method is to create a new period
+	 * @param id: period ID
+	 * @param initDate: initial date to period
+	 * @param name: period name
+	 * @param periodState: period state
+	 * @param programID: program Id where the period will be created
+	 * @throws SQLException
+	 */
+	public void CreatePeriod(String initDate, String name, String periodState) throws SQLException {
+		try {
+			String id = getNextID("jp_period");
+			String programID = getfirstID("program");
+			String query = "INSERT INTO jp_period(`ID`, `INITIALDATE`, `NAME`, `PERIODSTATE`, `PROGRAM_ID`) "
+					+ "VALUES (" + id + ", '" + initDate + "', '" + name + "', '" + periodState + "', " + programID + ")";
+			statement.execute(query);    
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				con.close();
+			}
+		}
+	}
+
+	/**
+	 * This method is to get the next usable Id
+	 * @return
+	 * @throws SQLException
+	 */
+	private String getNextID(String table) throws SQLException {
+		String query = "SELECT id FROM " + table + " ORDER BY id DESC LIMIT 1";
+		String value = "1";
+		ResultSet res = statement.executeQuery(query);
+		while(res.next()) {
+			value = res.getString(1);
+			if (value == "") {
+				value = "1";
+			}
+			value = (Integer.parseInt(value) + 1) + "";
+		}
+		return value;
+	}
+
+	/**
+	 * This method is to get the first id 
+	 * @param table
+	 * @return
+	 * @throws SQLException
+	 */
+	private String getfirstID(String table) throws SQLException {
+		String query = "SELECT id FROM " + table + " ORDER BY id asc LIMIT 1";
+		String value = "";
+		ResultSet res = statement.executeQuery(query);
+		while(res.next()) {
+			value = res.getString(1);
+			if (value == null) {
+				value = "1";
+			}
+		}
+		return value;
+	}
 }

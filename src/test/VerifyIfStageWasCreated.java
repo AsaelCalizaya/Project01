@@ -3,7 +3,7 @@ package test;
 import java.sql.SQLException;
 
 import org.junit.Assert;
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -44,7 +44,7 @@ public class VerifyIfStageWasCreated {
      * Delete all Stages of BD
      * @throws SQLException
      */
-    @AfterClass
+    @AfterMethod
     public void deleteData() throws SQLException {
     	con.DeleteStage();
     }

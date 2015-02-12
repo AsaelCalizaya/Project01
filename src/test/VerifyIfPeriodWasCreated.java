@@ -6,7 +6,10 @@ import java.sql.SQLException;
 import jxl.read.biff.BiffException;
 
 import org.junit.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.bd.ManageProgramsSuitSetup;
@@ -30,7 +33,7 @@ public class VerifyIfPeriodWasCreated {
 	 * @throws IOException 
 	 * @throws SQLException
 	 */
-	@BeforeClass
+	@BeforeMethod
 	public void createProgram() throws BiffException, SQLException, IOException {
 		ManageProgramsSuitSetup programCreation = new ManageProgramsSuitSetup();
 		programCreation.CreateProgramsBD();
@@ -43,7 +46,6 @@ public class VerifyIfPeriodWasCreated {
 	 */
 	@Test(dataProvider = "PeriodDataXls", dataProviderClass = DataProviderClass.class)
 	public void createPeriod(String name, String startDate) {
-		System.out.println(name + "---" + startDate);
 		HomePage home = new HomePage();
 		PeriodDetailPage detailPage = home
 				.clickProgramLink()
@@ -59,7 +61,7 @@ public class VerifyIfPeriodWasCreated {
 	 * Delete all Periods on BD
 	 * @throws SQLException
 	 */
-	@AfterClass
+	@AfterMethod
 	public void deleteData() throws SQLException {
 		con.DeletePeriod();
 		con.DeleteProgram();

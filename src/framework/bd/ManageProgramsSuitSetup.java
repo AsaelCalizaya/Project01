@@ -46,10 +46,10 @@ public class ManageProgramsSuitSetup {
 	}
 	
 	private static void createPeriodsByBD(List<Map<String, String>> periodXLS) throws SQLException {
-		System.out.println("Starting to create Programs......");
+		System.out.println("Starting to create Periods......");
 		for (Map<String, String> periodInfo : periodXLS)	{
-			con.CreatePeriod(periodInfo.get("Period StartDay"), periodInfo.get("Period Name"), periodInfo.get("Period State"));
+			con.CreatePeriod(periodInfo.get("PeriodStartDay"), periodInfo.get("PeriodName"), periodInfo.get("PeriodState"));
 		}
-		System.out.println("Finishing the creation of Programs......");
+		System.out.println("Finishing the creation of Periods......");
 	}
 }
