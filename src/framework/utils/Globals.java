@@ -7,9 +7,12 @@ public final class Globals {
 	public static final String URL = value.readJsonFile("browser", "url");
 	public static final String CHROMEDRIVER_PATH = value.readJsonFile("confDriver", "chrome");
 	public static final String IEDRIVER_PATH = value.readJsonFile("confDriver", "ie");
-	public static final int IMPLICIT_WAIT = Integer.parseInt(value.readJsonFile("confDriver", "implicitWait"));
-	public static final int EXPLICIT_WAIT = Integer.parseInt(value.readJsonFile("confDriver", "explicitWait"));
-	public static final int WEBDRIVERWAIT_SLEEP = Integer.parseInt(value.readJsonFile("confDriver", "explicitWait"));
+	public static final int IMPLICIT_WAIT = Integer.parseInt(value.readJsonFile("confDriver", 
+																	"implicitWait"));
+	public static final int EXPLICIT_WAIT = Integer.parseInt(value.readJsonFile("confDriver", 
+																	"explicitWait"));
+	public static final int WEBDRIVERWAIT_SLEEP = Integer.parseInt(value.readJsonFile("confDriver",
+																	"webDriverWait_Sleep"));
 	public static final String USER_NAME = value.readJsonFile("login", "user");
 	public static final String PASSWORD = value.readJsonFile("login", "password");
 	public static final String DB_CLASS = value.readJsonFile("dataBase", "dataBaseClass");

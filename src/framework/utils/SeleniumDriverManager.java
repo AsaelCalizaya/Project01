@@ -36,10 +36,10 @@ public class SeleniumDriverManager {
 		if (BROWSER.equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
 		} else if (BROWSER.equalsIgnoreCase("ie")) {
-			System.setProperty("webdriver.ie.driver", IEDRIVER_PATH);
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir") + IEDRIVER_PATH);
 			driver = new InternetExplorerDriver();
 		} else if (BROWSER.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", CHROMEDRIVER_PATH);
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + CHROMEDRIVER_PATH);
 			driver = new ChromeDriver();
 		}
 		driver.manage().window().maximize();

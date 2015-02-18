@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Acceptance test"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="16.196">
+  <properties />
+  
+  
+            <testcase name="createProgram" time="7.580" classname="test.creations.VerifyIfProgramWasCreated" />
+                <testcase name="createProgram" time="8.616" classname="test.creations.VerifyIfProgramWasCreated" />
+      
+</testsuite>

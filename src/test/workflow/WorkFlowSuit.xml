@@ -1,0 +1,12 @@
+<suite name="JagdPantherSuit">
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>
+	<test name="WorkFlow test" >
+		<classes>
+			<class name="test.StartTest"/>
+			<class name="test.workflow.VerifyIfApplicantWasCreated"/>
+		</classes>
+	</test>
+</suite>

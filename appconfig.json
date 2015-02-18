@@ -1,16 +1,16 @@
 {
 	"browser":
 	{
-		"navigator":"firefox",
+		"navigator":"chrome",
 		"url":"http://localhost:8080/"
 	},
 	"confDriver":
 	{
-		"chrome":"c:\Users\Asael Calizaya\workspace\jagdPanther\src\lib\driverBrowsers\chromedriver.exe",
-		"ie":"c:\Users\Asael Calizaya\workspace\jagdPanther\src\lib\driverBrowsers\IEDriverServer.exe",
+		"chrome":"\\src\\lib\\driverBrowsers\\chromedriver.exe",
+		"ie":"\\src\\lib\\driverBrowsers\\IEDriverServer.exe",
 		"implicitWait":"15",
 		"explicitWait":"15",
-		"explicitWait":"100"
+		"webDriverWait_Sleep":"100"
 	},
 	"login":
 	{

@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-JagdPantherSuit">
-              <span class="suite-name border-passed">JagdPantherSuit</span>
+              <span class="suite-name border-failed">JagdPantherSuit</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-JagdPantherSuit">
-                    <span>C:\Users\Asael Calizaya\workspace\jagdPanther\src\test\JagdPantherSuit.xml</span>
+                    <span>C:\Users\Asael Calizaya\workspace\jagdPanther\src\test\workflow\WorkFlowSuit.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -58,7 +58,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-JagdPantherSuit">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-JagdPantherSuit" class="hide-methods failed suite-JagdPantherSuit"> (hide)</a> <!-- hide-methods failed suite-JagdPantherSuit -->
+                      <a href="#" panel-name="suite-JagdPantherSuit" class="show-methods failed suite-JagdPantherSuit"> (show)</a> <!-- show-methods failed suite-JagdPantherSuit -->
+                    </span>
+                    <div class="method-list-content failed suite-JagdPantherSuit">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.workflow.VerifyIfApplicantWasCreated" hash-for-method="createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)">createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-JagdPantherSuit -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,52 +115,7 @@
                     <div class="method-list-content passed suite-JagdPantherSuit">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfApplicantWasCreated" hash-for-method="createApplicant(10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771)">createApplicant(10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfApplicantWasCreated" hash-for-method="createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)">createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfStageWasCreated" hash-for-method="createNewStage(stagename2, stageTitle2, stageDescription2)">createNewStage(stagename2, stageTitle2, stageDescription2)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfStageWasCreated" hash-for-method="createNewStage(stagename1, stageTitle1, stageDescription1)">createNewStage(stagename1, stageTitle1, stageDescription1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfUserWasCreated" hash-for-method="createNewUser(1234, userName1, userLastName1, user@lastName1.com)">createNewUser(1234, userName1, userLastName1, user@lastName1.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfUserWasCreated" hash-for-method="createNewUser(1235, userName2, userLastName2, user@lastName2.com)">createNewUser(1235, userName2, userLastName2, user@lastName2.com)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfPeriodWasCreated" hash-for-method="createPeriod(NamePeriod2, 1/3/2015)">createPeriod(NamePeriod2, 1/3/2015)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfPeriodWasCreated" hash-for-method="createPeriod(NamePeriod1, 1/2/2015)">createPeriod(NamePeriod1, 1/2/2015)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfProgramWasCreated" hash-for-method="createProgram(NameProgram1, TitleProgram1, DescriptionProgram1)">createProgram(NameProgram1, TitleProgram1, DescriptionProgram1)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.VerifyIfProgramWasCreated" hash-for-method="createProgram(NameProgram2, TitleProgram2, DescriptionProgram2)">createProgram(NameProgram2, TitleProgram2, DescriptionProgram2)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-JagdPantherSuit" title="test.workflow.VerifyIfApplicantWasCreated" hash-for-method="createApplicant(10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771)">createApplicant(10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-JagdPantherSuit -->
@@ -161,34 +130,51 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-JagdPantherSuit" class="panel JagdPantherSuit">
-          <div class="suite-JagdPantherSuit-class-passed">
+          <div class="suite-JagdPantherSuit-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.VerifyIfUserWasCreated</span>
+              <img src="failed.png"/>
+              <span class="class-name">test.workflow.VerifyIfApplicantWasCreated</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createNewUser(1234, userName1, userLastName1, user@lastName1.com)">
-                  </a> <!-- createNewUser(1234, userName1, userLastName1, user@lastName1.com) -->
-                  <span class="method-name">createNewUser</span>
-                  <span class="parameters">(1234, userName1, userLastName1, user@lastName1.com)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createNewUser(1235, userName2, userLastName2, user@lastName2.com)">
-                  </a> <!-- createNewUser(1235, userName2, userLastName2, user@lastName2.com) -->
-                  <span class="method-name">createNewUser</span>
-                  <span class="parameters">(1235, userName2, userLastName2, user@lastName2.com)</span>
+                  <a name="createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)">
+                  </a> <!-- createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772) -->
+                  <span class="method-name">createApplicant</span>
+                  <span class="parameters">(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element
+  (Session info: chrome=38.0.2125.111)
+  (Driver info: chromedriver=2.13.307647 (5a7d0541ebc58e69994a6fb2ed930f45261f3c29),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\ASAELC~1\AppData\Local\Temp\scoped_dir14588_21024}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=38.0.2125.111, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5047c81b0df6f3d85ed8c296f2ef657b
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:393)
+	at org.openqa.selenium.By$ById.findElement(By.java:214)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:37)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at framework.pages.applicant.NewApplicantPage.setCI(NewApplicantPage.java:44)
+	at framework.pages.applicant.NewApplicantPage.createApplicant(NewApplicantPage.java:108)
+	at test.workflow.VerifyIfApplicantWasCreated.createApplicant(VerifyIfApplicantWasCreated.java:57)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-JagdPantherSuit-class-passed -->
+          </div> <!-- suite-JagdPantherSuit-class-failed -->
           <div class="suite-JagdPantherSuit-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">test.VerifyIfApplicantWasCreated</span>
+              <span class="class-name">test.workflow.VerifyIfApplicantWasCreated</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -199,108 +185,28 @@
                   <span class="parameters">(10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)">
-                  </a> <!-- createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772) -->
-                  <span class="method-name">createApplicant</span>
-                  <span class="parameters">(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-JagdPantherSuit-class-passed -->
-          <div class="suite-JagdPantherSuit-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.VerifyIfStageWasCreated</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createNewStage(stagename2, stageTitle2, stageDescription2)">
-                  </a> <!-- createNewStage(stagename2, stageTitle2, stageDescription2) -->
-                  <span class="method-name">createNewStage</span>
-                  <span class="parameters">(stagename2, stageTitle2, stageDescription2)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createNewStage(stagename1, stageTitle1, stageDescription1)">
-                  </a> <!-- createNewStage(stagename1, stageTitle1, stageDescription1) -->
-                  <span class="method-name">createNewStage</span>
-                  <span class="parameters">(stagename1, stageTitle1, stageDescription1)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-JagdPantherSuit-class-passed -->
-          <div class="suite-JagdPantherSuit-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.VerifyIfPeriodWasCreated</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createPeriod(NamePeriod2, 1/3/2015)">
-                  </a> <!-- createPeriod(NamePeriod2, 1/3/2015) -->
-                  <span class="method-name">createPeriod</span>
-                  <span class="parameters">(NamePeriod2, 1/3/2015)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createPeriod(NamePeriod1, 1/2/2015)">
-                  </a> <!-- createPeriod(NamePeriod1, 1/2/2015) -->
-                  <span class="method-name">createPeriod</span>
-                  <span class="parameters">(NamePeriod1, 1/2/2015)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-JagdPantherSuit-class-passed -->
-          <div class="suite-JagdPantherSuit-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">test.VerifyIfProgramWasCreated</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="createProgram(NameProgram1, TitleProgram1, DescriptionProgram1)">
-                  </a> <!-- createProgram(NameProgram1, TitleProgram1, DescriptionProgram1) -->
-                  <span class="method-name">createProgram</span>
-                  <span class="parameters">(NameProgram1, TitleProgram1, DescriptionProgram1)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createProgram(NameProgram2, TitleProgram2, DescriptionProgram2)">
-                  </a> <!-- createProgram(NameProgram2, TitleProgram2, DescriptionProgram2) -->
-                  <span class="method-name">createProgram</span>
-                  <span class="parameters">(NameProgram2, TitleProgram2, DescriptionProgram2)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-JagdPantherSuit-class-passed -->
         </div> <!-- panel JagdPantherSuit -->
         <div panel-name="test-xml-JagdPantherSuit" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Asael Calizaya\workspace\jagdPanther\src\test\JagdPantherSuit.xml</span>
+            <span class="header-content">C:\Users\Asael Calizaya\workspace\jagdPanther\src\test\workflow\WorkFlowSuit.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;JagdPantherSuit&quot;&gt;
-  &lt;test name=&quot;Acceptance test&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test name=&quot;WorkFlow test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test.StartTest&quot;/&gt;
-      &lt;class name=&quot;test.VerifyIfProgramWasCreated&quot;/&gt;
-      &lt;class name=&quot;test.VerifyIfPeriodWasCreated&quot;/&gt;
-      &lt;class name=&quot;test.VerifyIfApplicantWasCreated&quot;/&gt;
-      &lt;class name=&quot;test.VerifyIfStageWasCreated&quot;/&gt;
-      &lt;class name=&quot;test.VerifyIfUserWasCreated&quot;/&gt;
+      &lt;class name=&quot;test.workflow.VerifyIfApplicantWasCreated&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Acceptance test --&gt;
+  &lt;/test&gt; &lt;!-- WorkFlow test --&gt;
 &lt;/suite&gt; &lt;!-- JagdPantherSuit --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -312,7 +218,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Acceptance test (6 classes)</span>
+                <span class="test-name">WorkFlow test (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -322,6 +228,14 @@
             <span class="header-content">Groups for JagdPantherSuit</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Acceptance</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">createApplicant</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-JagdPantherSuit" class="panel">
@@ -338,52 +252,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createPeriod')
-data.setCell(0, 2, 'test.VerifyIfPeriodWasCreated')
-data.setCell(0, 3, 7661);
+data.setCell(0, 1, 'createApplicant')
+data.setCell(0, 2, 'test.workflow.VerifyIfApplicantWasCreated')
+data.setCell(0, 3, 16825);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createPeriod')
-data.setCell(1, 2, 'test.VerifyIfPeriodWasCreated')
-data.setCell(1, 3, 7530);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createApplicant')
-data.setCell(2, 2, 'test.VerifyIfApplicantWasCreated')
-data.setCell(2, 3, 6812);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'createApplicant')
-data.setCell(3, 2, 'test.VerifyIfApplicantWasCreated')
-data.setCell(3, 3, 6330);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'createNewStage')
-data.setCell(4, 2, 'test.VerifyIfStageWasCreated')
-data.setCell(4, 3, 5306);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createProgram')
-data.setCell(5, 2, 'test.VerifyIfProgramWasCreated')
-data.setCell(5, 3, 5017);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'createNewStage')
-data.setCell(6, 2, 'test.VerifyIfStageWasCreated')
-data.setCell(6, 3, 4815);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'createNewUser')
-data.setCell(7, 2, 'test.VerifyIfUserWasCreated')
-data.setCell(7, 3, 4726);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'createProgram')
-data.setCell(8, 2, 'test.VerifyIfProgramWasCreated')
-data.setCell(8, 3, 4484);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'createNewUser')
-data.setCell(9, 2, 'test.VerifyIfUserWasCreated')
-data.setCell(9, 3, 4245);
+data.setCell(1, 1, 'createApplicant')
+data.setCell(1, 2, 'test.workflow.VerifyIfApplicantWasCreated')
+data.setCell(1, 3, 4372);
 window.suiteTableData['JagdPantherSuit']= { tableData: data, tableDiv: 'times-div-JagdPantherSuit'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 56 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-JagdPantherSuit">
               </div> <!-- times-div-JagdPantherSuit -->
             </div> <!-- times-div -->
@@ -416,93 +298,31 @@ return data;
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">test.VerifyIfProgramWasCreated</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">createProgram(NameProgram1, TitleProgram1, DescriptionProgram1)</span>
-                <span class="method-start">2854 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createProgram(NameProgram2, TitleProgram2, DescriptionProgram2)</span>
-                <span class="method-start">7900 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">deleteData</span>
-                <span class="method-start">12386 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.VerifyIfPeriodWasCreated</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.workflow.VerifyIfApplicantWasCreated</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">createProgram</span>
-                <span class="method-start">12463 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">createPeriod(NamePeriod1, 1/2/2015)</span>
-                <span class="method-start">12848 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createPeriod(NamePeriod2, 1/3/2015)</span>
-                <span class="method-start">20512 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">deleteData</span>
-                <span class="method-start">28043 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.VerifyIfApplicantWasCreated</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">createProgram</span>
-                <span class="method-start">28162 ms</span>
+                <span class="method-start">929 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">createApplicant(10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771)</span>
-                <span class="method-start">28455 ms</span>
+                <span class="method-start">1380 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">createApplicant(10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772)</span>
-                <span class="method-start">34785 ms</span>
+                <span class="method-start">5760 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">deleteData</span>
-                <span class="method-start">41599 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.VerifyIfStageWasCreated</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">createNewStage(stagename1, stageTitle1, stageDescription1)</span>
-                <span class="method-start">41830 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createNewStage(stagename2, stageTitle2, stageDescription2)</span>
-                <span class="method-start">47138 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">deleteData</span>
-                <span class="method-start">51954 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">test.VerifyIfUserWasCreated</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">createNewUser(1234, userName1, userLastName1, user@lastName1.com)</span>
-                <span class="method-start">51990 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createNewUser(1235, userName2, userLastName2, user@lastName2.com)</span>
-                <span class="method-start">56716 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">deleteData</span>
-                <span class="method-start">60962 ms</span>
+                <span class="method-start">22612 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">test.StartTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">quit</span>
-                <span class="method-start">61301 ms</span>
+                <span class="method-start">22701 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

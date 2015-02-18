@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Acceptance test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>7/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 17 21:29:55 BOT 2015</td>
+<td>Started on:</td><td>Wed Feb 18 17:27:58 BOT 2015</td>
 </tr>
-<tr><td>Total time:</td><td>58 seconds (58868 ms)</td>
+<tr><td>Total time:</td><td>66 seconds (66050 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,84 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.creations.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.creations.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod2, 1/3/2015</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Element is not displayed (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 231 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:37189/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 34e03031-8363-45ba-82ec-25bc8501da83
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:89)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at framework.pages.period.PeriodDetailPage.setPeriodName(PeriodDetailPage.java:54)
+	at test.creations.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:52)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace539690370", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace539690370'><pre>org.openqa.selenium.ElementNotVisibleException: Element is not displayed (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 231 milliseconds
+Build info: version: &apos;2.44.0&apos;, revision: &apos;76d78cf&apos;, time: &apos;2014-10-23 20:03:00&apos;
+System info: host: &apos;VDQADEV01-LT5YB&apos;, ip: &apos;172.20.200.19&apos;, os.name: &apos;Windows Server 2012 R2&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_25&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{browserAttachTimeout=0, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.usePerProcessProxy=false, ignoreZoomSetting=false, handlesAlerts=true, version=11, platform=WINDOWS, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, browserName=internet explorer, initialBrowserUrl=http://localhost:37189/, takesScreenshot=true, javascriptEnabled=true, ignoreProtectedModeSettings=false, enableElementCacheCleanup=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=dismiss}]
+Session ID: 34e03031-8363-45ba-82ec-25bc8501da83
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at framework.pages.period.PeriodDetailPage.setPeriodName(PeriodDetailPage.java:54)
+	at test.creations.VerifyIfPeriodWasCreated.createPeriod(VerifyIfPeriodWasCreated.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>5</td>
+<td>test.creations.VerifyIfPeriodWasCreated@87a85e1</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,55 +153,40 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.VerifyIfApplicantWasCreated.createApplicant()'><b>createApplicant</b><br>Test class: test.VerifyIfApplicantWasCreated<br>Parameters: 10001, NameApplicant, LastNameApplicant, Name1@LastName.com, 777777771</td>
+<td title='test.creations.VerifyIfStageWasCreated.createNewStage()'><b>createNewStage</b><br>Test class: test.creations.VerifyIfStageWasCreated<br>Parameters: stagename1, stageTitle1, stageDescription1</td>
 <td></td>
-<td>6</td>
-<td>test.VerifyIfApplicantWasCreated@7e990ed7</td></tr>
+<td>8</td>
+<td>test.creations.VerifyIfStageWasCreated@609db43b</td></tr>
 <tr>
-<td title='test.VerifyIfApplicantWasCreated.createApplicant()'><b>createApplicant</b><br>Test class: test.VerifyIfApplicantWasCreated<br>Parameters: 10002, NameApplicante, LastNameApplicant, Name1@LastName2.com, 777777772</td>
-<td></td>
-<td>6</td>
-<td>test.VerifyIfApplicantWasCreated@7e990ed7</td></tr>
-<tr>
-<td title='test.VerifyIfStageWasCreated.createNewStage()'><b>createNewStage</b><br>Test class: test.VerifyIfStageWasCreated<br>Parameters: stagename1, stageTitle1, stageDescription1</td>
-<td></td>
-<td>5</td>
-<td>test.VerifyIfStageWasCreated@c05fddc</td></tr>
-<tr>
-<td title='test.VerifyIfStageWasCreated.createNewStage()'><b>createNewStage</b><br>Test class: test.VerifyIfStageWasCreated<br>Parameters: stagename2, stageTitle2, stageDescription2</td>
-<td></td>
-<td>4</td>
-<td>test.VerifyIfStageWasCreated@c05fddc</td></tr>
-<tr>
-<td title='test.VerifyIfUserWasCreated.createNewUser()'><b>createNewUser</b><br>Test class: test.VerifyIfUserWasCreated<br>Parameters: 1234, userName1, userLastName1, user@lastName1.com</td>
-<td></td>
-<td>4</td>
-<td>test.VerifyIfUserWasCreated@5fb759d6</td></tr>
-<tr>
-<td title='test.VerifyIfUserWasCreated.createNewUser()'><b>createNewUser</b><br>Test class: test.VerifyIfUserWasCreated<br>Parameters: 1235, userName2, userLastName2, user@lastName2.com</td>
-<td></td>
-<td>4</td>
-<td>test.VerifyIfUserWasCreated@5fb759d6</td></tr>
-<tr>
-<td title='test.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod1, 1/2/2015</td>
+<td title='test.creations.VerifyIfStageWasCreated.createNewStage()'><b>createNewStage</b><br>Test class: test.creations.VerifyIfStageWasCreated<br>Parameters: stagename2, stageTitle2, stageDescription2</td>
 <td></td>
 <td>7</td>
-<td>test.VerifyIfPeriodWasCreated@4d15107f</td></tr>
+<td>test.creations.VerifyIfStageWasCreated@609db43b</td></tr>
 <tr>
-<td title='test.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod2, 1/3/2015</td>
+<td title='test.creations.VerifyIfUserWasCreated.createNewUser()'><b>createNewUser</b><br>Test class: test.creations.VerifyIfUserWasCreated<br>Parameters: 1234, userName1, userLastName1, user@lastName1.com</td>
 <td></td>
 <td>7</td>
-<td>test.VerifyIfPeriodWasCreated@4d15107f</td></tr>
+<td>test.creations.VerifyIfUserWasCreated@55f616cf</td></tr>
 <tr>
-<td title='test.VerifyIfProgramWasCreated.createProgram()'><b>createProgram</b><br>Test class: test.VerifyIfProgramWasCreated<br>Parameters: NameProgram1, TitleProgram1, DescriptionProgram1</td>
+<td title='test.creations.VerifyIfUserWasCreated.createNewUser()'><b>createNewUser</b><br>Test class: test.creations.VerifyIfUserWasCreated<br>Parameters: 1235, userName2, userLastName2, user@lastName2.com</td>
 <td></td>
-<td>5</td>
-<td>test.VerifyIfProgramWasCreated@7b4c50bc</td></tr>
+<td>7</td>
+<td>test.creations.VerifyIfUserWasCreated@55f616cf</td></tr>
 <tr>
-<td title='test.VerifyIfProgramWasCreated.createProgram()'><b>createProgram</b><br>Test class: test.VerifyIfProgramWasCreated<br>Parameters: NameProgram2, TitleProgram2, DescriptionProgram2</td>
+<td title='test.creations.VerifyIfPeriodWasCreated.createPeriod()'><b>createPeriod</b><br>Test class: test.creations.VerifyIfPeriodWasCreated<br>Parameters: NamePeriod1, 1/2/2015</td>
 <td></td>
-<td>4</td>
-<td>test.VerifyIfProgramWasCreated@7b4c50bc</td></tr>
+<td>11</td>
+<td>test.creations.VerifyIfPeriodWasCreated@87a85e1</td></tr>
+<tr>
+<td title='test.creations.VerifyIfProgramWasCreated.createProgram()'><b>createProgram</b><br>Test class: test.creations.VerifyIfProgramWasCreated<br>Parameters: NameProgram1, TitleProgram1, DescriptionProgram1</td>
+<td></td>
+<td>8</td>
+<td>test.creations.VerifyIfProgramWasCreated@3c947bc5</td></tr>
+<tr>
+<td title='test.creations.VerifyIfProgramWasCreated.createProgram()'><b>createProgram</b><br>Test class: test.creations.VerifyIfProgramWasCreated<br>Parameters: NameProgram2, TitleProgram2, DescriptionProgram2</td>
+<td></td>
+<td>7</td>
+<td>test.creations.VerifyIfProgramWasCreated@3c947bc5</td></tr>
 </table><p>
 </body>
 </html>
