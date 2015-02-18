@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import framework.pages.users.UsersPage;
 import framework.utils.SeleniumDriverManager;
+import framework.utils.Globals;
 
 /**
  * 
@@ -31,7 +32,7 @@ public class LoginPage {
 	 */
 	public LoginPage() {
 		driver = SeleniumDriverManager.getManager().getDriver();
-		driver.get("http://localhost:8080/");
+		driver.get(Globals.URL);
 		PageFactory.initElements(driver, this);
 	}
 	

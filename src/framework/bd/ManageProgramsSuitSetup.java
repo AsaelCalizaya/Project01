@@ -9,7 +9,7 @@ import jxl.read.biff.BiffException;
 import framework.utils.ExcelReadFile;
 
 public class ManageProgramsSuitSetup {
-	private static String filePath = "C:\\Users\\Asael Calizaya\\workspace\\jagdPanther\\src\\framework\\dataSource\\ExcelSource.xls";
+	private static String filePath = System.getProperty("user.dir") + "\\src\\framework\\dataSource\\ExcelSource.xls";
 	private static ConnectionBD con = new ConnectionBD();
 
 	/**

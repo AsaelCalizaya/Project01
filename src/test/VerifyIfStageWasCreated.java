@@ -3,7 +3,7 @@ package test;
 import java.sql.SQLException;
 
 import org.junit.Assert;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -29,22 +29,23 @@ public class VerifyIfStageWasCreated {
 	 * @param title
 	 * @param description
 	 * @throws InterruptedException 
+	 * @throws SQLException 
 	 */
-    @Test(dataProvider = "StagesDataXlsx", dataProviderClass = DataProviderClass.class)
-    public void createNewStage(String name, String title, String description) throws InterruptedException {
+    @Test(dataProvider = "StagesDataXls", dataProviderClass = DataProviderClass.class)
+    public void createNewStage(String name, String title, String description) throws SQLException {
     	HomePage home = new HomePage();  
-	    StagePage period = home
+	    StagePage stage = home
 	    	.clickStageLink()
 	    	.clickAddNewStageButton()
 	    	.createNewStage(name, title, description);
-	    Assert.assertTrue(period.getAllStages().contains(name));
+	    Assert.assertTrue(stage.getAllStages().contains(name));
     }
     
     /**
      * Delete all Stages of BD
      * @throws SQLException
      */
-    @AfterMethod
+    @AfterClass
     public void deleteData() throws SQLException {
     	con.DeleteStage();
     }

@@ -12,7 +12,7 @@ import org.testng.annotations.DataProvider;
  *
  */
 public class DataProviderClass {
-	private static String filePath = "C:\\Users\\Asael Calizaya\\workspace\\jagdPanther\\src\\framework\\dataSource\\ExcelSource.xls";
+	private static String filePath = System.getProperty("user.dir") + "\\src\\framework\\dataSource\\ExcelSource.xls";
 	private static ExcelReadFile objExcelFile;
 	
 	/**
@@ -21,7 +21,7 @@ public class DataProviderClass {
 	 * @throws IOException
 	 * @throws BiffException 
 	 */
-	@DataProvider(name = "ProgramsDataXlsx")
+	@DataProvider(name = "ProgramsDataXls")
 	public static Object[][] programData() throws IOException, BiffException {
 		objExcelFile = new ExcelReadFile(filePath);
 		return objExcelFile.getObjectValues("Programs");
@@ -43,7 +43,7 @@ public class DataProviderClass {
 	 * This method return an Object with data to create Applicants
 	 * @return
 	 */
-	@DataProvider(name = "ApplicantDataXlsx")
+	@DataProvider(name = "ApplicantDataXls")
 	public static Object[][] applicantData() {
 		return new Object[][]{
 				{"10001","NameApplicant","LastNameApplicant","Name1@LastName.com","777777771"},
@@ -57,7 +57,7 @@ public class DataProviderClass {
 	 * @throws IOException
 	 * @throws BiffException 
 	 */
-	@DataProvider(name = "StagesDataXlsx")
+	@DataProvider(name = "StagesDataXls")
 	public static Object[][] stageData() throws IOException, BiffException {
 		objExcelFile = new ExcelReadFile(filePath);
 		return objExcelFile.getObjectValues("Stages");
@@ -67,7 +67,7 @@ public class DataProviderClass {
 	 * This method return an Object with data to create Users
 	 * @return
 	 */
-	@DataProvider(name = "UsersDataXlsx")
+	@DataProvider(name = "UsersDataXls")
 	public static Object[][] userData() {
 		return new Object[][] {
 				{"1234","userName1","userLastName1","user@lastName1.com"},

@@ -2,6 +2,11 @@ package framework.bd;
 
 import java.sql.*;
 
+import static framework.utils.Globals.DIR_DB;
+import static framework.utils.Globals.USER_DB;
+import static framework.utils.Globals.PASSWORD_DB;
+import static framework.utils.Globals.DB_CLASS;
+
 /**
  * 
  * @author Asael Calizaya
@@ -10,18 +15,15 @@ import java.sql.*;
 public class ConnectionBD {
 	private static Connection con = null;
 	private static Statement statement;
-	private static String DIR_DB = "jdbc:mysql://localhost/jagdpanther";   
-	private static String USER_DB = "panther";
-	private static String PASS_DB = "panther11";
 
 	/**
 	 * This constructor initialize the connection with data base
 	 */
 	public ConnectionBD() {
 		try {
-			String dbClass = "com.mysql.jdbc.Driver";
+			String dbClass = DB_CLASS;
 			Class.forName(dbClass).newInstance();
-			Connection con = DriverManager.getConnection(DIR_DB, USER_DB, PASS_DB);
+			Connection con = DriverManager.getConnection(DIR_DB, USER_DB, PASSWORD_DB);
 			statement = con.createStatement();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -132,11 +134,41 @@ public class ConnectionBD {
 	}
 
 	/**
+	 * This method get the name of program
+	 * @param name: name of program to get
+	 * @return: String program name
+	 * @throws SQLException
+	 */
+	public String getProgramName(String name) throws SQLException {
+		return getAnyName("program", "NAME = '" + name + "'");
+	}
+	
+	/**
+	 * This method get the name of period
+	 * @param name: name of period to get
+	 * @return: String period name
+	 * @throws SQLException
+	 */
+	public String getPeriodName(String name) throws SQLException {
+		return getAnyName("jp_period", "NAME = '" + name + "'");
+	}
+	
+	/**
+	 * This method get the name of applicant
+	 * @param ci: ci of applicant to get name
+	 * @return: String applicant name
+	 * @throws SQLException
+	 */
+	public String getPersonName(String ci) throws SQLException {
+		return getAnyName("jp_user", "CI = " + ci);
+	}
+	
+	/**
 	 * This method is to get the next usable Id
 	 * @return
 	 * @throws SQLException
 	 */
-	private String getNextID(String table) throws SQLException {
+ 	private String getNextID(String table) throws SQLException {
 		String query = "SELECT id FROM " + table + " ORDER BY id DESC LIMIT 1";
 		String value = "1";
 		ResultSet res = statement.executeQuery(query);
@@ -164,6 +196,31 @@ public class ConnectionBD {
 			value = res.getString(1);
 			if (value == null) {
 				value = "1";
+			}
+		}
+		return value;
+	}
+	
+	/**
+	 * This method get data of any table
+	 * @param table: table name
+	 * @param condition: condition to execute query
+	 * @return: String name
+	 * @throws SQLException
+	 */
+	private String getAnyName(String table, String condition) throws SQLException {
+		String value = "null";
+		try {
+			String query = "SELECT NAME FROM " + table + " WHERE " + condition + "";
+			ResultSet res = statement.executeQuery(query);
+			while(res.next()){
+				value = res.getString(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				con.close();
 			}
 		}
 		return value;

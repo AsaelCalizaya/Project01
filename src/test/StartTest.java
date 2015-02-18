@@ -1,11 +1,17 @@
 package test;
 
+import static framework.utils.Globals.PASSWORD;
+import static framework.utils.Globals.USER_NAME;
+
 import java.sql.SQLException;
 
-import org.testng.annotations.*;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 
 import framework.pages.login.LoginPage;
 import framework.utils.reporter.JyperionListener;
+
 
 /**
  * 
@@ -22,7 +28,7 @@ public class StartTest {
 	 */
 	@BeforeSuite
 	public void init() {
-		loginPage.login("admin@admin.com","admin11");
+		loginPage.login(USER_NAME, PASSWORD);
 	}
 	
 	/**

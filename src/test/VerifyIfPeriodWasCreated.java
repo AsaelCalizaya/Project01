@@ -6,15 +6,14 @@ import java.sql.SQLException;
 import jxl.read.biff.BiffException;
 
 import org.junit.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.bd.ManageProgramsSuitSetup;
 import framework.pages.HomePage;
-import framework.pages.period.PeriodDetailPage;
 import framework.utils.DataProviderClass;
 import framework.utils.reporter.JyperionListener;
 
@@ -33,7 +32,7 @@ public class VerifyIfPeriodWasCreated {
 	 * @throws IOException 
 	 * @throws SQLException
 	 */
-	@BeforeMethod
+	@BeforeClass
 	public void createProgram() throws BiffException, SQLException, IOException {
 		ManageProgramsSuitSetup programCreation = new ManageProgramsSuitSetup();
 		programCreation.CreateProgramsBD();
@@ -43,25 +42,26 @@ public class VerifyIfPeriodWasCreated {
 	 * Description:This test case is to verify that a period can be created to a program
 	 * @param name
 	 * @param startDate
+	 * @throws SQLException 
 	 */
 	@Test(dataProvider = "PeriodDataXls", dataProviderClass = DataProviderClass.class)
-	public void createPeriod(String name, String startDate) {
+	public void createPeriod(String name, String startDate) throws SQLException {
 		HomePage home = new HomePage();
-		PeriodDetailPage detailPage = home
-				.clickProgramLink()
-				.clickDetailProgram()
-				.clickPeriodButton()
-				.clickAddNewPeriodButton()
-				.setPeriodName(name)
-				.setStartPeriodDate(startDate);
-		Assert.assertTrue(detailPage.getPeriodName().contains(name));
+		home
+			.clickProgramLink()
+			.clickDetailProgram()
+			.clickPeriodButton()
+			.clickAddNewPeriodButton()
+			.setPeriodName(name)
+			.setStartPeriodDate(startDate);
+		Assert.assertEquals(con.getPeriodName(name), name);
 	}
 	
 	/**
 	 * Delete all Periods on BD
 	 * @throws SQLException
 	 */
-	@AfterMethod
+	@AfterClass
 	public void deleteData() throws SQLException {
 		con.DeletePeriod();
 		con.DeleteProgram();

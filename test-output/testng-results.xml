@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="JagdPantherSuit" duration-ms="65363" started-at="2015-02-11T21:38:46Z" finished-at="2015-02-11T21:39:51Z">
+  <suite name="JagdPantherSuit" duration-ms="58868" started-at="2015-02-18T01:29:55Z" finished-at="2015-02-18T01:30:54Z">
     <groups>
     </groups>
-    <test name="Acceptance test" duration-ms="65363" started-at="2015-02-11T21:38:46Z" finished-at="2015-02-11T21:39:51Z">
+    <test name="Acceptance test" duration-ms="58868" started-at="2015-02-18T01:29:55Z" finished-at="2015-02-18T01:30:54Z">
       <class name="test.VerifyIfStageWasCreated">
-        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="createNewStage" duration-ms="5030" started-at="2015-02-11T17:39:31Z" data-provider="StagesDataXlsx" finished-at="2015-02-11T17:39:36Z">
+        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@c05fddc]" name="createNewStage" duration-ms="5306" started-at="2015-02-17T21:30:34Z" data-provider="StagesDataXls" finished-at="2015-02-17T21:30:40Z">
           <params>
             <param index="0">
               <value>
@@ -28,11 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewStage -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="deleteData" is-config="true" duration-ms="42" started-at="2015-02-11T17:39:36Z" finished-at="2015-02-11T17:39:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteData -->
-        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="createNewStage" duration-ms="4724" started-at="2015-02-11T17:39:36Z" data-provider="StagesDataXlsx" finished-at="2015-02-11T17:39:41Z">
+        <test-method status="PASS" signature="createNewStage(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfStageWasCreated@c05fddc]" name="createNewStage" duration-ms="4815" started-at="2015-02-17T21:30:40Z" data-provider="StagesDataXls" finished-at="2015-02-17T21:30:44Z">
           <params>
             <param index="0">
               <value>
@@ -53,27 +49,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewStage -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfStageWasCreated@4b8d604b]" name="deleteData" is-config="true" duration-ms="5" started-at="2015-02-11T17:39:41Z" finished-at="2015-02-11T17:39:41Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfStageWasCreated@c05fddc]" name="deleteData" is-config="true" duration-ms="35" started-at="2015-02-17T21:30:44Z" finished-at="2015-02-17T21:30:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->
       </class> <!-- test.VerifyIfStageWasCreated -->
       <class name="test.StartTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:test.StartTest@480d3575]" name="init" is-config="true" duration-ms="2509" started-at="2015-02-11T17:38:43Z" finished-at="2015-02-11T17:38:46Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.StartTest@30f842ca]" name="init" is-config="true" duration-ms="2166" started-at="2015-02-17T21:29:53Z" finished-at="2015-02-17T21:29:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:test.StartTest@480d3575]" name="quit" is-config="true" duration-ms="263" started-at="2015-02-11T17:39:51Z" finished-at="2015-02-11T17:39:52Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:test.StartTest@30f842ca]" name="quit" is-config="true" duration-ms="268" started-at="2015-02-17T21:30:54Z" finished-at="2015-02-17T21:30:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
       </class> <!-- test.StartTest -->
       <class name="test.VerifyIfPeriodWasCreated">
-        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfPeriodWasCreated@790da477]" name="createProgram" is-config="true" duration-ms="427" started-at="2015-02-11T17:38:58Z" finished-at="2015-02-11T17:38:58Z">
+        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfPeriodWasCreated@4d15107f]" name="createProgram" is-config="true" duration-ms="211" started-at="2015-02-17T21:30:05Z" finished-at="2015-02-17T21:30:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@790da477]" name="createPeriod" duration-ms="8208" started-at="2015-02-11T17:38:58Z" data-provider="PeriodDataXls" finished-at="2015-02-11T17:39:06Z">
+        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@4d15107f]" name="createPeriod" duration-ms="7661" started-at="2015-02-17T21:30:05Z" data-provider="PeriodDataXls" finished-at="2015-02-17T21:30:13Z">
           <params>
             <param index="0">
               <value>
@@ -89,15 +85,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPeriod -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfPeriodWasCreated@790da477]" name="deleteData" is-config="true" duration-ms="10" started-at="2015-02-11T17:39:06Z" finished-at="2015-02-11T17:39:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteData -->
-        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfPeriodWasCreated@790da477]" name="createProgram" is-config="true" duration-ms="186" started-at="2015-02-11T17:39:06Z" finished-at="2015-02-11T17:39:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@790da477]" name="createPeriod" duration-ms="8380" started-at="2015-02-11T17:39:06Z" data-provider="PeriodDataXls" finished-at="2015-02-11T17:39:15Z">
+        <test-method status="PASS" signature="createPeriod(java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfPeriodWasCreated@4d15107f]" name="createPeriod" duration-ms="7530" started-at="2015-02-17T21:30:13Z" data-provider="PeriodDataXls" finished-at="2015-02-17T21:30:21Z">
           <params>
             <param index="0">
               <value>
@@ -113,13 +101,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPeriod -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfPeriodWasCreated@790da477]" name="deleteData" is-config="true" duration-ms="47" started-at="2015-02-11T17:39:15Z" finished-at="2015-02-11T17:39:15Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfPeriodWasCreated@4d15107f]" name="deleteData" is-config="true" duration-ms="119" started-at="2015-02-17T21:30:21Z" finished-at="2015-02-17T21:30:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->
       </class> <!-- test.VerifyIfPeriodWasCreated -->
       <class name="test.VerifyIfProgramWasCreated">
-        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="createProgram" duration-ms="5239" started-at="2015-02-11T17:38:47Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-11T17:38:52Z">
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@7b4c50bc]" name="createProgram" duration-ms="5017" started-at="2015-02-17T21:29:55Z" data-provider="ProgramsDataXls" finished-at="2015-02-17T21:30:00Z">
           <params>
             <param index="0">
               <value>
@@ -140,11 +128,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="deleteData" is-config="true" duration-ms="41" started-at="2015-02-11T17:38:52Z" finished-at="2015-02-11T17:38:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteData -->
-        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="createProgram" duration-ms="5061" started-at="2015-02-11T17:38:52Z" data-provider="ProgramsDataXlsx" finished-at="2015-02-11T17:38:57Z">
+        <test-method status="PASS" signature="createProgram(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfProgramWasCreated@7b4c50bc]" name="createProgram" duration-ms="4484" started-at="2015-02-17T21:30:00Z" data-provider="ProgramsDataXls" finished-at="2015-02-17T21:30:05Z">
           <params>
             <param index="0">
               <value>
@@ -165,17 +149,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfProgramWasCreated@5fb759d6]" name="deleteData" is-config="true" duration-ms="7" started-at="2015-02-11T17:38:57Z" finished-at="2015-02-11T17:38:57Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfProgramWasCreated@7b4c50bc]" name="deleteData" is-config="true" duration-ms="76" started-at="2015-02-17T21:30:05Z" finished-at="2015-02-17T21:30:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->
       </class> <!-- test.VerifyIfProgramWasCreated -->
       <class name="test.VerifyIfApplicantWasCreated">
-        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createProgram" is-config="true" duration-ms="329" started-at="2015-02-11T17:39:15Z" finished-at="2015-02-11T17:39:15Z">
+        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfApplicantWasCreated@7e990ed7]" name="createProgram" is-config="true" duration-ms="292" started-at="2015-02-17T21:30:21Z" finished-at="2015-02-17T21:30:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createApplicant" duration-ms="7443" started-at="2015-02-11T17:39:15Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-11T17:39:23Z">
+        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@7e990ed7]" name="createApplicant" duration-ms="6330" started-at="2015-02-17T21:30:21Z" data-provider="ApplicantDataXls" finished-at="2015-02-17T21:30:27Z">
           <params>
             <param index="0">
               <value>
@@ -206,15 +190,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createApplicant -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="deleteData" is-config="true" duration-ms="97" started-at="2015-02-11T17:39:23Z" finished-at="2015-02-11T17:39:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteData -->
-        <test-method status="PASS" signature="createProgram()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createProgram" is-config="true" duration-ms="343" started-at="2015-02-11T17:39:23Z" finished-at="2015-02-11T17:39:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createProgram -->
-        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="createApplicant" duration-ms="7621" started-at="2015-02-11T17:39:23Z" data-provider="ApplicantDataXlsx" finished-at="2015-02-11T17:39:31Z">
+        <test-method status="PASS" signature="createApplicant(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfApplicantWasCreated@7e990ed7]" name="createApplicant" duration-ms="6812" started-at="2015-02-17T21:30:27Z" data-provider="ApplicantDataXls" finished-at="2015-02-17T21:30:34Z">
           <params>
             <param index="0">
               <value>
@@ -245,13 +221,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createApplicant -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfApplicantWasCreated@5e7cd6cc]" name="deleteData" is-config="true" duration-ms="42" started-at="2015-02-11T17:39:31Z" finished-at="2015-02-11T17:39:31Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfApplicantWasCreated@7e990ed7]" name="deleteData" is-config="true" duration-ms="71" started-at="2015-02-17T21:30:34Z" finished-at="2015-02-17T21:30:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->
       </class> <!-- test.VerifyIfApplicantWasCreated -->
       <class name="test.VerifyIfUserWasCreated">
-        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="createNewUser" duration-ms="5332" started-at="2015-02-11T17:39:41Z" data-provider="UsersDataXlsx" finished-at="2015-02-11T17:39:46Z">
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@5fb759d6]" name="createNewUser" duration-ms="4726" started-at="2015-02-17T21:30:45Z" data-provider="UsersDataXls" finished-at="2015-02-17T21:30:49Z">
           <params>
             <param index="0">
               <value>
@@ -277,11 +253,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUser -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="deleteData" is-config="true" duration-ms="25" started-at="2015-02-11T17:39:46Z" finished-at="2015-02-11T17:39:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteData -->
-        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="createNewUser" duration-ms="5033" started-at="2015-02-11T17:39:46Z" data-provider="UsersDataXlsx" finished-at="2015-02-11T17:39:51Z">
+        <test-method status="PASS" signature="createNewUser(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.VerifyIfUserWasCreated@5fb759d6]" name="createNewUser" duration-ms="4245" started-at="2015-02-17T21:30:49Z" data-provider="UsersDataXls" finished-at="2015-02-17T21:30:53Z">
           <params>
             <param index="0">
               <value>
@@ -307,7 +279,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewUser -->
-        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfUserWasCreated@57bc27f5]" name="deleteData" is-config="true" duration-ms="31" started-at="2015-02-11T17:39:51Z" finished-at="2015-02-11T17:39:51Z">
+        <test-method status="PASS" signature="deleteData()[pri:0, instance:test.VerifyIfUserWasCreated@5fb759d6]" name="deleteData" is-config="true" duration-ms="71" started-at="2015-02-17T21:30:53Z" finished-at="2015-02-17T21:30:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteData -->

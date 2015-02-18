@@ -3,13 +3,12 @@ package test;
 import java.sql.SQLException;
 
 import org.junit.Assert;
-import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.pages.HomePage;
-import framework.pages.users.UsersPage;
 import framework.utils.DataProviderClass;
 import framework.utils.reporter.JyperionListener;
 
@@ -29,22 +28,23 @@ public class VerifyIfUserWasCreated {
 	 * @param name: User Name
 	 * @param lastName: User LastName
 	 * @param email: UserEmail
+	 * @throws SQLException 
 	 */
-    @Test(dataProvider = "UsersDataXlsx", dataProviderClass = DataProviderClass.class)
-    public void createNewUser(String ci, String name, String lastName, String email) {
+    @Test(dataProvider = "UsersDataXls", dataProviderClass = DataProviderClass.class)
+    public void createNewUser(String ci, String name, String lastName, String email) throws SQLException {
     	HomePage home = new HomePage();  
-	    UsersPage users = home
+	    home
 	    	.clickUsersLink()
 	    	.clickAddNewUserButton()
 	    	.createNewUser(ci, name, lastName, email);
-	    Assert.assertTrue(users.getUsers().contains(name));
+	    Assert.assertEquals(con.getPersonName(ci), name);
     }
     
      /**
       * Delete all users except the admin user
       * @throws SQLException
       */
-    @AfterMethod
+    @AfterClass
     public void deleteData() throws SQLException {
     	con.DeletePerson();
     }

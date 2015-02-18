@@ -6,15 +6,14 @@ import java.sql.SQLException;
 import jxl.read.biff.BiffException;
 
 import org.junit.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import framework.bd.ConnectionBD;
 import framework.bd.ManageProgramsSuitSetup;
 import framework.pages.HomePage;
-import framework.pages.period.PeriodDetailPage;
 import framework.utils.DataProviderClass;
 import framework.utils.reporter.JyperionListener;
 
@@ -33,7 +32,7 @@ public class VerifyIfApplicantWasCreated {
 	 * @throws IOException 
 	 * @throws BiffException 
 	 */
-	@BeforeMethod
+	@BeforeClass
 	public void createProgram() throws SQLException, BiffException, IOException {
 		ManageProgramsSuitSetup programCreation = new ManageProgramsSuitSetup();
 		programCreation.CreateProgramsBD();
@@ -48,24 +47,25 @@ public class VerifyIfApplicantWasCreated {
 	 * @param lastName: applicant LastName
 	 * @param eMail: applicant Email
 	 * @param cellphone: applicant CellPhone
+	 * @throws SQLException 
 	 */
-	@Test(dataProvider = "ApplicantDataXlsx",dataProviderClass = DataProviderClass.class)
-	public void createApplicant(String ci,String name,String lastName,String eMail,String cellphone) {
+	@Test(dataProvider = "ApplicantDataXls",dataProviderClass = DataProviderClass.class)
+	public void createApplicant(String ci,String name,String lastName,String eMail,String cellphone) throws SQLException {
 		HomePage home = new HomePage();
-		PeriodDetailPage periodDetail = home
-				.clickPeriodLink()
-				.clickEditButton()
-				.clickApplicantButton()
-				.clickNewApplicantButton()
-				.createApplicant(ci, name, lastName, eMail, cellphone);		
-		Assert.assertTrue(periodDetail.getAllAplicants().contains(eMail));			
+		home
+			.clickPeriodLink()
+			.clickEditButton()
+			.clickApplicantButton()
+			.clickNewApplicantButton()
+			.createApplicant(ci, name, lastName, eMail, cellphone);	
+		Assert.assertEquals(con.getPersonName(ci), name);
 	}
 	
 	/**
 	 * Delete all applicants on BD
 	 * @throws SQLException
 	 */
-	@AfterMethod
+	@AfterClass
 	public void deleteData() throws SQLException {
 		con.DeletePerson();
 		con.DeletePeriod();

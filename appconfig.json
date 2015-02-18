@@ -1,0 +1,27 @@
+{
+	"browser":
+	{
+		"navigator":"firefox",
+		"url":"http://localhost:8080/"
+	},
+	"confDriver":
+	{
+		"chrome":"c:\Users\Asael Calizaya\workspace\jagdPanther\src\lib\driverBrowsers\chromedriver.exe",
+		"ie":"c:\Users\Asael Calizaya\workspace\jagdPanther\src\lib\driverBrowsers\IEDriverServer.exe",
+		"implicitWait":"15",
+		"explicitWait":"15",
+		"explicitWait":"100"
+	},
+	"login":
+	{
+		"user":"admin@admin.com",
+		"password":"admin11"
+	},
+	"dataBase":
+	{
+		"dataBaseClass":"com.mysql.jdbc.Driver",
+		"dirDB":"jdbc:mysql://localhost/jagdpanther",
+		"userDB":"panther",
+		"passwordDB":"panther11"
+	}
+}
